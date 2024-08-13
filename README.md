@@ -4,7 +4,7 @@
 
 This template allows you to build your own synapse-integrated portal.
 
-## Setup
+## Setup Your Own Repository
 
 This is a template repository so you can easily create a new repository based on this template repository.
 
@@ -18,7 +18,7 @@ This is a template repository so you can easily create a new repository based on
 
 ## Using Synapse as the Backend
 
-This portal template uses Synapse as its backend.
+This portal template uses Synapse as its backend. Synapse can handle and store all the data you want to display in your portal, including files, datasets, tables, and more. The portal retrieves this data dynamically from Synapse, meaning any updates made to the relevant data in Synapse will be reflected in the portal as well. Synapse also allows you to manage the accessibility of your data through permissions, ensuring that the right people can view and contribute to your project.
 
 The data used in this portal template can be found in this Synapse Project: https://www.synapse.org/Synapse:syn60582629/wiki/.
 
