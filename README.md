@@ -46,7 +46,7 @@ Refer to the docs for more details about this copy function: https://python-docs
 
 To quickly setup login functionality for your portal, you can use Synapse as your OAuth Server.
 
-1. First, login into [Synapse](https://www.synapse.org)
+1. First, login to [Synapse](https://www.synapse.org).
 
 2. Click on your user icon then navigate to "Account Settings" > "OAuth Clients" > "Manage OAuth Clients" then click the "Create New Client" button. This will open up a popup form. Fill in the popup form and click save. Take note of your client ID and ID.
 
@@ -60,7 +60,7 @@ For more information about using Synapse as an OAuth Server, please refer to: ht
 
 When signed out of the portal template website, users can view datasets and files but not publications. To view publications, you must be signed in. This is because file contents and table row data are not viewable or downloadable anonymously unless they are marked as OPEN_DATA.
 
-Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html for more about the different data access types.
+Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html for more information about the different data access types in Synapse.
 
 ## Deployment
 
@@ -68,4 +68,6 @@ This portal template is deployed on [Vercel](https://vercel.com) at https://syna
 
 ## Resources
 
-Refer to the [Synapse documentation](https://help.synapse.org/docs/) for more information.
+- [Synapse Website](https://www.synapse.org)
+- [Synapse Documentation](https://help.synapse.org/docs/)
+- [Synapse Python Client](https://python-docs.synapse.org)
