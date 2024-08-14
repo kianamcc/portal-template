@@ -86,7 +86,6 @@ function Navbar() {
     const authorizationCode = urlParams.get("code");
     const redirect_uri = window.location.origin;
 
-    const CLIENT_ID_SYNAPSE = "100377";
     const url = "https://repo-prod.prod.sagebase.org/auth/v1/oauth2/token";
 
     if (authorizationCode) {
@@ -97,7 +96,9 @@ function Navbar() {
             Authorization:
               "Basic " +
               btoa(
-                `${CLIENT_ID_SYNAPSE}:${import.meta.env.VITE_PORTAL_SECRET}`
+                `${import.meta.env.VITE_PORTAL_CLIENT}:${
+                  import.meta.env.VITE_PORTAL_SECRET
+                }`
               ),
             "Content-Type": "application/x-www-form-urlencoded",
           },

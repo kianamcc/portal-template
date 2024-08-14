@@ -1,10 +1,10 @@
 # Synapse Portal Template
 
-## What does this do?
+## What is the Synapse Portal Template?
 
-This template allows you to build your own synapse-integrated portal.
+This template provides a foundation for building your own Synapse-integrated portal. It streamlines the process, enabling you to create a portal tailored to your community’s needs while leveraging Synapse's powerful infrastructure. Visit https://www.synapse.org to learn more about Synapse.
 
-## Setup Your Own Repository
+## Getting Started
 
 This is a template repository so you can easily create a new repository based on this template repository.
 
@@ -28,7 +28,7 @@ The data used in this portal template can be found in this Synapse project: http
 
 2. Create a new project by clicking "Projects" > "Create a New Project".
 
-3. If you would like to base your project off of the Synapse project used in this portal, you can copy its contents over to your new project. Below is an example using the Synapse Python Client.
+3. You can copy tables, links, files, folders, and projects used in this portal into your new project using the copy function. Below is an example using the Synapse Python Client.
 
 ```
 import synapseclient
@@ -41,6 +41,30 @@ synapseutils.copy(syn, "syn60582629", SYN_ID_OF_DESTINATION)
 ```
 
 Refer to the docs for more details about this copy function: https://python-docs.synapse.org/reference/synapse_utils/#synapseutils.copy_functions.copy.
+
+## Using Synapse as an OAuth Server
+
+To quickly setup login functionality for your portal, you can use Synapse as your OAuth Server.
+
+1. First, login into [Synapse](https://www.synapse.org)
+
+2. Click on your user icon then navigate to "Account Settings" > "OAuth Clients" > "Manage OAuth Clients" then click the "Create New Client" button. This will open up a popup form. Fill in the popup form and click save. Take note of your client ID and ID.
+
+3. You must have your OAuth Client verified in order to use it. Click on the "Submit Verificaiton" button for your newly created OAuth Client under the "Verified Column" and follow the instructions.
+
+4. Once verified, you can start using your OAuth Client for user authentication. Update the value for VITE_PORTAL_SECRET and VITE_PORTAL_CLIENT in the .env file with your OAuth secret ID and client ID. Environment variables can also be configured in your deployment platform of choice.
+
+For more information about using Synapse as an OAuth Server, please refer to: https://help.synapse.org/docs/Using-Synapse-as-an-OAuth-Server.2048327904.html
+
+## Open Access
+
+When signed out of the portal template website, users can view datasets and files but not publications. To view publications, you must be signed in. This is because file contents and table row data are not viewable or downloadable anonymously unless they are marked as OPEN_DATA.
+
+Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html for more about the different data access types.
+
+## Deployment
+
+This portal template is deployed on [Vercel](https://vercel.com) at https://synapse-portal-template.vercel.app.
 
 ## Resources
 
