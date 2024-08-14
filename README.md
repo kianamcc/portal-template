@@ -20,13 +20,27 @@ This is a template repository so you can easily create a new repository based on
 
 This portal template uses Synapse as its backend. Synapse can handle and store all the data you want to display in your portal, including files, datasets, tables, and more. The portal retrieves this data dynamically from Synapse, meaning any updates made to the relevant data in your Synapse project will be reflected in the portal as well. Synapse also allows you to manage the accessibility of your data through permissions, ensuring that the right people can view and contribute to your project.
 
-The data used in this portal template can be found in this Synapse Project: https://www.synapse.org/Synapse:syn60582629/wiki/.
+The data used in this portal template can be found in this Synapse project: https://www.synapse.org/Synapse:syn60582629/wiki/.
 
 ### Create Your Own Synapse Project
 
 1. First, register for a Synapse account at https://www.synapse.org to get basic functionality access.
 
 2. Create a new project by clicking "Projects" > "Create a New Project".
+
+3. If you would like to base your project off of the Synapse project used in this portal, you can copy its contents over to your new project. Below is an example using the Synapse Python Client.
+
+```
+import synapseclient
+import synapseutils
+
+
+syn = synapseclient.login(authToken=YOUR_ACCESS_TOKEN)
+
+synapseutils.copy(syn, "syn60582629", SYN_ID_OF_DESTINATION)
+```
+
+Refer to the docs for more details about this copy function: https://python-docs.synapse.org/reference/synapse_utils/#synapseutils.copy_functions.copy.
 
 ## Resources
 
