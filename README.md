@@ -2,7 +2,7 @@
 
 ## What is the Synapse Portal Template?
 
-This template provides a foundation for building your own Synapse-integrated portal. It streamlines the process, enabling you to create a portal tailored to your community’s needs while leveraging Synapse's powerful infrastructure. Visit https://www.synapse.org to learn more about Synapse.
+This template provides a foundation for building your own Synapse-integrated portal. It streamlines the process, enabling you to create a portal tailored to your community’s needs while utilizing Synapse's powerful infrastructure. Visit https://www.synapse.org to learn more about Synapse.
 
 ## Getting Started
 
