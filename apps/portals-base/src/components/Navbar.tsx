@@ -72,11 +72,12 @@ function Navbar() {
   };
 
   const redirectToSynapseLogin = () => {
-    const client_id = "100377"; // enter your client ID
     const redirect_uri = encodeURIComponent(document.location.origin);
     const scope = encodeURIComponent("openid email view download");
 
-    const test = `https://signin.synapse.org/?response_type=code&client_id=${client_id}&scope=${scope}&redirect_uri=${redirect_uri}`;
+    const test = `https://signin.synapse.org/?response_type=code&client_id=${
+      import.meta.env.VITE_PORTAL_CLIENT
+    }&scope=${scope}&redirect_uri=${redirect_uri}`;
 
     window.location = test as unknown as Location;
   };
@@ -175,6 +176,7 @@ function Navbar() {
     return href;
   };
 
+  // , hideLogin = false
   const { name, icon } = logoHeaderConfig;
   const imageElement = icon ? (
     <img
@@ -308,7 +310,7 @@ function Navbar() {
                       fullWidth
                       variant="outlined"
                       sx={{ ...buttonSx, height: "50px" }}
-                      // onClick={redirectToSynapseLogin}
+                      onClick={redirectToSynapseLogin}
                     >
                       Sign In With Synapse
                     </Button>

@@ -64,10 +64,11 @@ Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html 
 
 ## Deployment
 
-This portal template is deployed on [Vercel](https://vercel.com) at https://synapse-portal-template.vercel.app.
+This portal template is deployed on [Vercel](https://vercel.com) at https://synapse-portal-template.vercel.app. Vercel is a fast and reliable platform that allows you to deploy frontend applications, offering integration with GitHub for automatic deployments. Whenever changes are pushed to the repository, Vercel automatically builds and deploys the site, providing preview URLs for testing.
 
 ## Resources
 
 - [Synapse Website](https://www.synapse.org)
 - [Synapse Documentation](https://help.synapse.org/docs/)
 - [Synapse Python Client](https://python-docs.synapse.org)
+- [Vercel](https://vercel.com)

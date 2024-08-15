@@ -1,4 +1,5 @@
 // Optionally override SCSS classes here (these styles will be loaded last to ensure they have highest priority)
+
 #header {
   background-color: #bac68f;
 }
@@ -10,3 +11,51 @@
 .SRC-blackText {
   color: #515359;
 }
+
+.MuiTypography-root a {
+  color: #d4a373;
+  text-decoration-color: #d4a373;
+
+  &:hover {
+    color: #d29d68;
+    text-decoration-color: #d29d68;
+  }
+}
+
+[aria-label="Explore Sections"] .MuiButtonBase-root {
+  color: #bac68f !important;
+}
+
+[aria-label="Explore Sections"] .Mui-selected {
+  color: #bac68f !important;
+  border-bottom-color: #bac68f !important;
+}
+
+.MuiPaginationItem-root.Mui-selected {
+  background-color: #bac68f !important;
+
+  &:hover {
+    background-color: #b1c179 !important;
+  }
+}
+
+// Goals
+.Goals__Card__header__title {
+  color: #515359;
+}
+
+.Goals__Card__header__count {
+  color: #715336;
+  border-color: #9e6c3d;
+}
+
+.Goals__Mobile__Content a,
+.Goals__Card__summary a,
+#signin-button {
+  background-color: #d4a373;
+
+  &:hover {
+    background-color: #c89766;
+  }
+}
+// End Goals

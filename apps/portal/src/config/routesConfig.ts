@@ -5,6 +5,31 @@ import { datasetsDetailsPage } from "./synapseConfigs/datasets";
 
 const routes: GenericRoute[] = [
   {
+    path: "",
+    exact: true,
+    synapseConfigArray: [
+      {
+        name: "Goals",
+        title: "Our Data",
+        centerTitle: true,
+        outsideContainerClassName: "home-spacer",
+        props: {
+          entityId: "syn61670107",
+        },
+      },
+      {
+        name: "Markdown",
+        title: "Related Resources",
+        centerTitle: true,
+        props: {
+          ownerId: "syn60582629",
+          wikiId: "629348",
+          loadingSkeletonRowCount: 10,
+        },
+      },
+    ],
+  },
+  {
     path: "Explore",
     routes: [
       {
