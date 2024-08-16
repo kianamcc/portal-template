@@ -2,6 +2,9 @@
 
 #header {
   background-color: #bac68f;
+  background-image: url("../../../public/header_bkg.png");
+  background-size: 30% 100%;
+  background-position: 100%;
 }
 
 #footer {
@@ -22,6 +25,7 @@
   }
 }
 
+// Explore
 [aria-label="Explore Sections"] .MuiButtonBase-root {
   color: #bac68f !important;
 }
@@ -38,6 +42,23 @@
     background-color: #b1c179 !important;
   }
 }
+
+.TopLevelControls__querycount button,
+.TopLevelControls__actions button {
+  color: #bac68f !important;
+}
+
+td .MuiLink-root,
+.SRC-portalCard .MuiLink-root {
+  color: #bac68f;
+  text-decoration-color: #bac68f;
+
+  &:hover {
+    color: #bac68f;
+    text-decoration-color: #bac68f;
+  }
+}
+// End Explore
 
 // Goals
 .Goals__Card__header__title {

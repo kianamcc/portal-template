@@ -4,6 +4,10 @@
 
 This template provides a foundation for building your own Synapse-integrated portal. It streamlines the process, enabling you to create a portal tailored to your community’s needs while utilizing Synapse's powerful infrastructure. Visit https://www.synapse.org to learn more about Synapse.
 
+## Viewing the Synapse Portal Template
+
+To see the template website, go to: https://synapse-portal-template.vercel.app. You must be signed in to your Synapse account to view certain components of the website due to some data currently not being open access. To learn more about access types, [go to the Open Access section](#Open Access).
+
 ## Getting Started
 
 This is a template repository so you can easily create a new repository based on this template repository.
@@ -11,9 +15,16 @@ This is a template repository so you can easily create a new repository based on
 1. Click on the "Use this template" dropdown on the repository page and select "Create a new repository". This will create a new repository in your GitHub account based on this template.
 
 2. Once your new repository is created, clone it to your local machine:
+
    ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-   cd YOUR-REPOSITORY
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+   cd YOUR_REPOSITORY
+   ```
+
+3. To run the project:
+   ```bash
+   pnpm i
+   pnpm dev
    ```
 
 ## Using Synapse as a Backend
