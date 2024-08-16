@@ -3,8 +3,12 @@
 #header {
   background-color: #bac68f;
   background-image: url("/header_bkg.png");
-  background-size: 30% 100%;
+  background-size: 35% 100%;
   background-position: 100%;
+
+  @media screen and (max-width: 768px) {
+    background-image: none;
+  }
 }
 
 #footer {

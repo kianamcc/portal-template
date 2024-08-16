@@ -63,7 +63,9 @@ To quickly setup login functionality for your portal, you can use Synapse as you
 
 3. You must have your OAuth Client verified in order to use it. Click on the "Submit Verificaiton" button for your newly created OAuth Client under the "Verified Column" and follow the instructions.
 
-4. Once verified, you can start using your OAuth Client for user authentication. Update the value for VITE_PORTAL_SECRET and VITE_PORTAL_CLIENT in the .env file with your OAuth secret ID and client ID. Environment variables can also be configured in your deployment platform of choice.
+4. Once verified, update the value for VITE_PORTAL_SECRET and VITE_PORTAL_CLIENT in the .env file with your OAuth secret ID and client ID. Environment variables can also be configured in your deployment platform of choice.
+
+5. Update the redirect_uris.json file with your production environment/any other environment you want. Redirect uri http://127.0.0.1:3000 in the json file is for the development environment.
 
 For more information about using Synapse as an OAuth Server, please refer to: https://help.synapse.org/docs/Using-Synapse-as-an-OAuth-Server.2048327904.html
 
