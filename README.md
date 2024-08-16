@@ -6,7 +6,7 @@ This template provides a foundation for building your own Synapse-integrated por
 
 ## Viewing the Synapse Portal Template
 
-To see the template website, go to: https://synapse-portal-template.vercel.app. You must be signed in to your Synapse account to view certain components of the website due to some data currently not being open access. To learn more about access types, [go to the Open Access section](#Open Access).
+To see the template website, go to: https://synapse-portal-template.vercel.app. You must be signed in to your Synapse account to view certain components of the website due to some data currently not being open access. To learn more about access types, [go to the Open Access section](#open-access).
 
 ## Getting Started
 
