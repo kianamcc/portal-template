@@ -6,8 +6,8 @@ type RouteConfig = Record<Portal, RouteButtonsLinks>;
 // lists each Portal's navigation buttons and links
 const routesConfig: RouteConfig = {
   template: {
-    buttons: ["Explore", "Sign In"],
-    links: ["Home"],
+    buttons: ["Home", "Explore", "Sign In"],
+    links: [],
   },
 };
 

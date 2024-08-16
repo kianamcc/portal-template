@@ -12,13 +12,15 @@ const files: SynapseConfig = {
     showExportToCavatica: true,
     isRowSelectionVisible: true,
     rowSelectionPrimaryKey: ["id"],
-    visibleColumnCount: 6,
     fileIdColumnName: "id",
     fileNameColumnName: "name",
     fileVersionColumnName: "currentVersion",
     facetsToPlot: ["fileType"],
     tableConfiguration: {
       showAccessColumn: true,
+    },
+    searchConfiguration: {
+      searchable: ["fileType"],
     },
   },
 };

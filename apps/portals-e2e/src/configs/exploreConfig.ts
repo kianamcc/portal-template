@@ -13,8 +13,7 @@ type ExploreConfig = Record<Portal, ExploreTabTypes>;
 // lists the objects (cards, charts, table, people) on each Explore tab per Portal
 const exploreConfig: ExploreConfig = {
   template: {
-    // table: ["Files"], // uncomment when files is public
-    cards: ["Datasets"], // add "Publications" when public
+    cards: ["Datasets"],
   },
 };
 
