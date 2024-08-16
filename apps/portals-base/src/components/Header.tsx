@@ -7,7 +7,7 @@ function Header() {
   const {
     summary,
     title,
-    showBlur = true,
+    showBlur = false,
     centerText = false,
     HeaderSvg,
   } = headerConfig;
