@@ -63,6 +63,10 @@ const routes: GenericRoute[] = [
         path: "Publications",
         hideRouteFromNavbar: false,
       },
+      {
+        path: "People",
+        hideRouteFromNavbar: false,
+      },
     ],
   },
 ];
