@@ -8,6 +8,24 @@ This template provides a foundation for building your own Synapse-integrated por
 
 To see the template website, go to: https://synapse-portal-template.vercel.app. You must be signed in to your Synapse account to view certain components of the website due to some data currently not being open access. To learn more about access types, [go to the Open Access section](#open-access).
 
+## Key Terms
+
+1. Synapse: A collaborative platform that allows scientists to share, analyze and collaborate on research data.
+
+2. Sage Web Monorepo: A centralized repository containing multiple projects within the Sage ecosystem.
+
+3. Synapse React Client: A React Library for building Synapse-related UI.
+
+4. Continuous Integration and Continuous Deployment (CI/CD): The practice of automating software development processes such as building, testing, and deployment.
+
+5. GitHub Actions: A feature provided by GitHub that enables you to automate software workflows, such as building, testing, and deploying directly within your GitHub repository.
+
+6. End-to-End Testing (E2E): A testing approach designed to validate the functionality and performance of an application by simulating real user scenarios.
+
+7. Playwright: A testing framework developed by Microsoft that allows us to perform reliable end-to-end testing for web applications.
+
+8. Vercel: A platform for deploying and managing frontend applications.
+
 ## Getting Started
 
 This is a template repository so you can easily create a new repository based on this template repository.
@@ -21,11 +39,28 @@ This is a template repository so you can easily create a new repository based on
    cd YOUR_REPOSITORY
    ```
 
-3. To run the project:
+3. To run, in the root of the project, use the following commands:
    ```bash
    pnpm i
    pnpm dev
    ```
+## Project Code Structure
+Refer to the [Synapse Web Monorepo (GitHub)](https://github.com/Sage-Bionetworks/synapse-web-monorepo/tree/main) for code context.
+
+Reference to some of the key areas of the project:
+```
+├── ./.github	GitHub workflows and actions can be found here
+├── ./apps
+│   ├── ./portals	Main project directory
+│   │   ├── ./src
+│   │   │   ├── ./config	Contains portal configurations, routing, SQL strings to obtain Synapse data, etc.	
+│   │   │   │   ├── ./style	Add style overrides here such as button colors, header background image, and etc.
+│   │   │   │   ├── ./synapseConfigs	Contains data display configurations
+│   ├── ./portals-base	This directory serves as the foundation of the portal, providing essential components and infrastructure
+│   └── ./portals-e2e	Test directory
+├── ./mocks Mock data used for testing and stories
+
+```
 
 ## Using Synapse as a Backend
 
@@ -44,7 +79,6 @@ The data used in this portal template can be found in this Synapse project: http
 ```
 import synapseclient
 import synapseutils
-
 
 syn = synapseclient.login(authToken=YOUR_ACCESS_TOKEN)
 
@@ -127,13 +161,45 @@ When signed out of the portal template website, users can view datasets and file
 
 Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html for more information about the different data access types in Synapse.
 
+## CI/CD
+
+Continuous Integration and Continuous Development (CI/CD) is implemented for this portal using GitHub Actions and Vercel.
+
+Actions:
+- action.yml
+  - Responsible for installing the correct version of Node.js, configuring Pnpm and caching dependencies.
+
+Workflows:
+- end-to-end-test-portals.yml
+  - Retrieves latest codebase, uses the Pnpm setup action to make sure dependencies are installed, builds the portal project, installs and sets up Playwright Browsers for testing, runs end-to-end tests, and uploads test results as artifacts.
+
+## Testing
+
+This portal uses End-to-End (E2E) testing with Playwright.
+
+### Testing Locally
+
+1. Run the local server before starting tests. In the root directory, you can run the project using the command pnpm dev.
+
+2. In the portals-e2e directory, use the pnpm e2e command to run the tests.
+
 ## Deployment
 
 This portal template is deployed on [Vercel](https://vercel.com) at https://synapse-portal-template.vercel.app. Vercel is a fast and reliable platform that allows you to deploy frontend applications, offering integration with GitHub for automatic deployments. Whenever changes are pushed to the repository, Vercel automatically builds and deploys the site, providing preview URLs for testing.
 
+When deploying your project to Vercel, make sure the root directory is apps/portal, the directory of the code we want to deploy.
+
+<img width="768" alt="Screenshot 2024-08-28 at 2 44 05 PM" src="https://github.com/user-attachments/assets/86230cdb-f749-4f46-99ae-c1d4bf739af9">
+
+<img width="768" alt="Screenshot 2024-08-28 at 2 43 55 PM" src="https://github.com/user-attachments/assets/1c3b04c2-0b28-41f5-a015-3641f2ec7645">
+
 ## Resources
 
-- [Synapse Website](https://www.synapse.org)
-- [Synapse Documentation](https://help.synapse.org/docs/)
+- [synapse.org](https://www.synapse.org)
+- [Synapse Web Monorepo (GitHub)](https://github.com/Sage-Bionetworks/synapse-web-monorepo/tree/main)
+- [Synapse React Client (Storybook)](https://sage-bionetworks.github.io/synapse-web-monorepo/?path=/story/components-addconditionsforusebutton--demo)
+- [Synapse Docs](https://help.synapse.org/docs/)
 - [Synapse Python Client](https://python-docs.synapse.org)
+- [GitHub Actions](https://docs.github.com/en/actions) 
+- [Playwright](https://playwright.dev) 
 - [Vercel](https://vercel.com)
