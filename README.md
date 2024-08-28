@@ -58,8 +58,6 @@ Reference to some of the key areas of the project:
 │   │   │   │   ├── ./synapseConfigs	Contains data display configurations
 │   ├── ./portals-base	This directory serves as the foundation of the portal, providing essential components and infrastructure
 │   └── ./portals-e2e	Test directory
-├── ./mocks Mock data used for testing and stories
-
 ```
 
 ## Using Synapse as a Backend
