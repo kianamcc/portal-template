@@ -1,17 +1,11 @@
 import { datasetsSql } from "../resources";
 import { SynapseConfig } from "portals-base/types/portal-config";
-import { columnAliases as sharedColumnAliases } from "./commonProps";
 import { CardConfiguration, SynapseConstants } from "synapse-react-client";
 import { ColumnSingleValueFilterOperator } from "@sage-bionetworks/synapse-types";
 import { DetailsPageProps } from "portals-base/types/portal-util-types";
 
 export const newDatasetsSql = `${datasetsSql} order by ROW_ID desc limit 3`;
 const rgbIndex = 8;
-
-const columnAliases = {
-  ...sharedColumnAliases,
-  studyId: "Study Name",
-};
 
 export const datasetCardConfiguration: CardConfiguration = {
   type: SynapseConstants.GENERIC_CARD,
@@ -36,7 +30,6 @@ const datasets: SynapseConfig = {
     sql: datasetsSql,
     cardConfiguration: datasetCardConfiguration,
     name: "Datasets",
-    columnAliases,
     facetsToPlot: [""],
     searchConfiguration: {
       searchable: ["name"],
@@ -60,7 +53,6 @@ export const datasetDetailsPageConfig: DetailsPageProps = {
           showDownloadColumn: true,
         },
         shouldDeepLink: false,
-        columnAliases,
         defaultShowPlots: false,
       },
       // tableSqlKeys: ['id'],  // Do not modify the sql where condition based on search params
@@ -78,7 +70,6 @@ export const datasetsDetailsPage: SynapseConfig[] = [
       ...datasetCardConfiguration,
       sql: datasetsSql,
       isHeader: true,
-      columnAliases,
     },
   },
   {

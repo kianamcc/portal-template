@@ -1,6 +1,5 @@
 import { SynapseConstants } from "synapse-react-client";
 import { SynapseConfig } from "portals-base/types/portal-config";
-import { columnAliases } from "./commonProps";
 import type { CardConfiguration } from "synapse-react-client";
 
 import { publicationsSql } from "../resources";
@@ -32,7 +31,6 @@ const publications: SynapseConfig = {
     shouldDeepLink: true,
     name: "Publications",
     cardConfiguration: publicationsCardConfiguration,
-    columnAliases,
     facetsToPlot: [""],
     searchConfiguration: {
       searchable: ["journal"],

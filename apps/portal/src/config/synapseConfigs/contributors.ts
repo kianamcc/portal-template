@@ -1,5 +1,4 @@
 import { SynapseConfig } from "portals-base/types/portal-config";
-import { columnAliases } from "./commonProps";
 import { contributorsSql } from "../resources";
 import { CardConfiguration, SynapseConstants } from "synapse-react-client";
 
@@ -27,7 +26,6 @@ const contributors: SynapseConfig = {
       ...initiativeCardConfiguration,
     },
     name: "Contributors",
-    columnAliases,
     searchConfiguration: {
       searchable: ["name"],
     },
