@@ -57,6 +57,10 @@ Refer to the docs for more details about this copy function: https://python-docs
 
 To quickly setup login functionality for your portal, you can use Synapse as your OAuth Server.
 
+By using Synapse as the OAuth provider, we can simplify the authentication process for third party applications and allow them to securely access user data in Synapse. The app redirects users to https://signin.synapse.org and Synapse will handle the login process. Synapse will then return back with an authorization code, which can be used to obtain an access token to make authenticated requests.
+
+To create a new OAuth client with Synapse, you can do so directly from the Synapse website or the Python and R clients.
+
 1. First, login to [Synapse](https://www.synapse.org).
 
 2. Click on your user icon then navigate to "Account Settings" > "OAuth Clients" > "Manage OAuth Clients" then click the "Create New Client" button. This will open up a popup form. Fill in the popup form and click save. Take note of your client ID and ID.
