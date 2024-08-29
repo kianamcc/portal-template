@@ -32,8 +32,8 @@ jobs:
       - name: Set Vercel authentication
         run: echo $VERCEL_TOKEN > ~/.vercel/token
 
-      # - name: Link vercel project
-      #   run: vercel link --token $VERCEL_TOKEN --yes
+      - name: Link vercel project
+        run: vercel link --token $VERCEL_TOKEN --yes
 
       - name: List deployments
         id: list_deployments
