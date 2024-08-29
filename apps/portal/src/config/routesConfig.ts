@@ -3,6 +3,19 @@ import { GenericRoute } from "portals-base/types/portal-config";
 import routeControlWrapperProps from "./routeControlWrapperProps";
 import { datasetsDetailsPage } from "./synapseConfigs/datasets";
 
+/**
+ * This file defines the routing configuration for the application.
+ *
+ * - The `routes` array specifies different routes and their settings:
+ *   - Each route has a `path`, which determines the URL structure.
+ *   - `synapseConfigArray` contains configuration for components displayed on each route.
+ *   - Nested routes are used for more specific paths and components.
+ *
+ * Example:
+ * - The root path ("/") displays the "Goals" and "Markdown" sections.
+ * - The "Explore" path includes nested routes like "Datasets" and "Files".
+ */
+
 const routes: GenericRoute[] = [
   {
     path: "",

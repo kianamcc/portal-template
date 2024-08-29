@@ -1,4 +1,9 @@
-/* Get data from your Synapse project using SQL strings! See [link] for available SQL commands. */
+/**
+ * This file contains SQL queries for retrieving data from specific sources.
+ *
+ * Example:
+ * - `datasetsSql`: Retrieves all records from the dataset with ID `syn62057395`.
+ */
 
 export const datasetsSql = "SELECT * FROM syn62057395";
 export const filesSql = "SELECT * FROM syn61835515";
