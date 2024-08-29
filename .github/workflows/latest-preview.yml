@@ -19,6 +19,7 @@ jobs:
         with:
           target-branch: latest-preview
           force: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Vercel CLI
         run: npm i -g vercel@latest
