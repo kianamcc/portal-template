@@ -45,7 +45,7 @@ jobs:
           DEPLOYMENT_URL=$(vercel ls --token=$VERCEL_TOKEN --yes | grep https | head -n 1 | awk '{print $1}')
           echo "DEPLOYMENT_URL=$DEPLOYMENT_URL"
           echo "DEPLOYMENT_URL=$DEPLOYMENT_URL" >> $GITHUB_ENV
-          vercel inspect $DEPLOYMENT_URL --token $VERCEL_TOKEN --logs --wait
+          vercel inspect $DEPLOYMENT_URL --token $VERCEL_TOKEN --logs --wait --timeout=5m
 
       - name: Set alias for latest-preview branch
         run: |
