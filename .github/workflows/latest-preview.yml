@@ -49,4 +49,4 @@ jobs:
 
       - name: Set alias for latest-preview branch
         run: |
-          vercel alias set $DEPLOYMENT_URL latest-preview.vercel.app --token $VERCEL_TOKEN
+          vercel alias set $DEPLOYMENT_URL template-latest-preview.vercel.app --token $VERCEL_TOKEN
