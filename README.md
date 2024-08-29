@@ -191,6 +191,10 @@ When deploying your project to Vercel, make sure the root directory is apps/port
 
 <img width="768" alt="Screenshot 2024-08-28 at 2 43 55 PM" src="https://github.com/user-attachments/assets/1c3b04c2-0b28-41f5-a015-3641f2ec7645">
 
+## Vercel OAuth Configuration: Handling Unique Preview URLs for Redirects
+
+Vercel creates unique URLs for each preview which results in not being able to use OAuth for the previews as the URLs are not registered with the Synapse OAuth Client. To solve this issue, we use GitHub Actions. A branch named latest-preview was created specifically for managing preview deployments that require OAuth. This branch is automatically updated using GitHub Actions to mirror ([zofrex/mirror-branch](zofrex/mirror-branch)) the latest commit from any branch with this commit message: [latest-preview]. The Vercel CLI was used to assign a stable alias, _template-latest-preview.app.vercel_, to the latest-preview branch. In your GitHub repository, go to Settings > Secrets and variables > Actions, and update your VERCEL_ORG_ID, VERCEL_PROJECT_ID, and VERCEL_TOKEN. The organization ID and project ID can be found in .vercel > project.json file in your project.
+
 ## Resources
 
 - [synapse.org](https://www.synapse.org)
