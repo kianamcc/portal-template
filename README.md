@@ -32,14 +32,16 @@ This is a template repository so you can easily create a new repository based on
 
 1. Click on the "Use this template" dropdown on the repository page and select "Create a new repository". This will create a new repository in your GitHub account based on this template.
 
-2. Once your new repository is created, clone it to your local machine:
+<img width="207" alt="Screenshot 2024-08-30 at 10 14 55 AM" src="https://github.com/user-attachments/assets/68c947da-4800-484f-89c4-588e8381e5a2">
+
+3. Once your new repository is created, clone it to your local machine:
 
    ```bash
    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
    cd YOUR_REPOSITORY
    ```
 
-3. To run, in the root of the project, use the following commands:
+4. To run, in the root of the project, use the following commands:
    ```bash
    pnpm i
    pnpm dev
