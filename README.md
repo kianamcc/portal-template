@@ -108,10 +108,10 @@ To create a new OAuth client with Synapse, you can do so directly from the Synap
 
 2. Click on your user icon then navigate to "Account Settings" > "OAuth Clients" > "Manage OAuth Clients" then click the "Create New Client" button. This will open up a popup form. Fill in the popup form and click save.
 
-<img width="768" alt="Screenshot 2024-08-28 at 1 09 30 PM" src="https://github.com/user-attachments/assets/3beca915-42c3-4be9-8811-ce298b609936">
+<img width="600" alt="Screenshot 2024-08-28 at 1 09 30 PM" src="https://github.com/user-attachments/assets/3beca915-42c3-4be9-8811-ce298b609936">
 
 3. Take note of your client ID and secret.
-<img width="768" alt="Screenshot 2024-08-02 at 4 05 07 PM" src="https://github.com/user-attachments/assets/09619cbb-01b5-49aa-9e07-fe396668bdad">
+<img width="600" alt="Screenshot 2024-08-02 at 4 05 07 PM" src="https://github.com/user-attachments/assets/09619cbb-01b5-49aa-9e07-fe396668bdad">
 
 4. You must have your OAuth Client verified in order to use it. Click on the "Submit Verification" button for your newly created OAuth Client under the "Verified Column" and follow the instructions.
 
@@ -121,7 +121,9 @@ To create a new OAuth client with Synapse, you can do so directly from the Synap
 
 When using multiple hosts (ex: production and dev) as redirect URIs, a sector_identifier_uri parameter (https://openid.net/specs/openid-connect-registration-1_0.html#SectorIdentifierValidation ) is required.
 
-Update the redirect_uris.json file in the public folder of the project with your production environment/any other environment you want. Redirect uri http://127.0.0.1:3000 in the json file is for the development environment.
+Create a file named _redirect_uris.json_ in the public folder of the project for example with your production environment/any other environment you want (for Synapse, you can't register _localhost_ as a redirect URI for development environments; use _127.0.0.1_ instead.).
+
+<img width="409" alt="Screenshot 2024-08-30 at 11 15 10 AM" src="https://github.com/user-attachments/assets/33d33012-aab3-4235-8442-333bf7a54db4">
 
 Make sure to fill out the Sector Identifier URI section on the OAuth Client form with the URL of where the redirect_uris.json is hosted (your-hosted-website.someHost/redirect-uris.json. Ex: https://synapse-portal-template.vercel.app/redirect_uris.json.
 
@@ -197,15 +199,15 @@ This portal template is deployed on [Vercel](https://vercel.com) at https://syna
 
 When deploying your project to Vercel, make sure the root directory is apps/portal, the directory of the code we want to deploy.
 
-<img width="768" alt="Screenshot 2024-08-28 at 2 44 05 PM" src="https://github.com/user-attachments/assets/86230cdb-f749-4f46-99ae-c1d4bf739af9">
+<img width="600" alt="Screenshot 2024-08-28 at 2 44 05 PM" src="https://github.com/user-attachments/assets/86230cdb-f749-4f46-99ae-c1d4bf739af9">
 
-<img width="768" alt="Screenshot 2024-08-28 at 2 43 55 PM" src="https://github.com/user-attachments/assets/1c3b04c2-0b28-41f5-a015-3641f2ec7645">
+<img width="600" alt="Screenshot 2024-08-28 at 2 43 55 PM" src="https://github.com/user-attachments/assets/1c3b04c2-0b28-41f5-a015-3641f2ec7645">
 
 ## Vercel OAuth Configuration: Handling Unique Preview URLs for Redirects
 
 Vercel creates unique URLs for each preview which results in not being able to use OAuth for the previews as the URLs are not registered with the Synapse OAuth Client. To solve this issue, we use GitHub Actions. A branch named latest-preview was created specifically for managing preview deployments that require OAuth. This branch is automatically updated using GitHub Actions to mirror ([zofrex/mirror-branch](zofrex/mirror-branch)) the latest commit from any branch with this commit message: [latest-preview]. The Vercel CLI was used to assign a stable alias, _template-latest-preview.app.vercel_, to the latest-preview branch. In your GitHub repository, go to Settings > Secrets and variables > Actions, and add VERCEL_ORG_ID, VERCEL_PROJECT_ID, and VERCEL_TOKEN values. The organization ID and project ID can be found in .vercel > project.json file in your project.
 
-<img width="768" alt="Screenshot 2024-08-30 at 10 57 19 AM" src="https://github.com/user-attachments/assets/d4fe1709-d55e-449e-97bb-37e8bb14a13c">
+<img width="600" height="350"" alt="Screenshot 2024-08-30 at 10 57 19 AM" src="https://github.com/user-attachments/assets/d4fe1709-d55e-449e-97bb-37e8bb14a13c">
 
 ## Resources
 
