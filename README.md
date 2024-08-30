@@ -203,7 +203,9 @@ When deploying your project to Vercel, make sure the root directory is apps/port
 
 ## Vercel OAuth Configuration: Handling Unique Preview URLs for Redirects
 
-Vercel creates unique URLs for each preview which results in not being able to use OAuth for the previews as the URLs are not registered with the Synapse OAuth Client. To solve this issue, we use GitHub Actions. A branch named latest-preview was created specifically for managing preview deployments that require OAuth. This branch is automatically updated using GitHub Actions to mirror ([zofrex/mirror-branch](zofrex/mirror-branch)) the latest commit from any branch with this commit message: [latest-preview]. The Vercel CLI was used to assign a stable alias, _template-latest-preview.app.vercel_, to the latest-preview branch. In your GitHub repository, go to Settings > Secrets and variables > Actions, and update your VERCEL_ORG_ID, VERCEL_PROJECT_ID, and VERCEL_TOKEN. The organization ID and project ID can be found in .vercel > project.json file in your project.
+Vercel creates unique URLs for each preview which results in not being able to use OAuth for the previews as the URLs are not registered with the Synapse OAuth Client. To solve this issue, we use GitHub Actions. A branch named latest-preview was created specifically for managing preview deployments that require OAuth. This branch is automatically updated using GitHub Actions to mirror ([zofrex/mirror-branch](zofrex/mirror-branch)) the latest commit from any branch with this commit message: [latest-preview]. The Vercel CLI was used to assign a stable alias, _template-latest-preview.app.vercel_, to the latest-preview branch. In your GitHub repository, go to Settings > Secrets and variables > Actions, and add VERCEL_ORG_ID, VERCEL_PROJECT_ID, and VERCEL_TOKEN values. The organization ID and project ID can be found in .vercel > project.json file in your project.
+
+<img width="768" alt="Screenshot 2024-08-30 at 10 57 19 AM" src="https://github.com/user-attachments/assets/d4fe1709-d55e-449e-97bb-37e8bb14a13c">
 
 ## Resources
 
