@@ -82,6 +82,52 @@ const routes: GenericRoute[] = [
       },
     ],
   },
+  {
+    path: "Apply",
+    routes: [
+      {
+        path: "",
+        exact: true,
+        hideRouteFromNavbar: true,
+        synapseConfigArray: [
+          {
+            name: "Markdown",
+            props: {
+              ownerId: "syn60582629",
+              wikiId: "629468",
+            },
+          },
+          {
+            name: "SynapseFormSubmissionGrid",
+            props: {
+              pathpart: "/Apply/FormSubmission",
+              formGroupId: "9",
+              itemNoun: "Submission",
+              formClass: "apply-form",
+            },
+          },
+        ],
+      },
+      {
+        exact: true,
+        hideRouteFromNavbar: true,
+        path: "FormSubmission",
+        synapseConfigArray: [
+          {
+            name: "SynapseFormWrapper",
+            props: {
+              fileNamePath: "form",
+              formSchemaEntityId: "syn62691891",
+              formUiSchemaEntityId: "syn62691901",
+              formNavSchemaEntityId: "syn62691881",
+              formTitle: "Your Submission",
+              formClass: "apply-form",
+            },
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export default routes;
