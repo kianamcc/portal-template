@@ -61,7 +61,7 @@ Reference to some of the key areas of the project:
 ```
 ├── ./.github	GitHub workflows and actions can be found here
 ├── ./apps
-│   ├── ./portals	Main project directory
+│   ├── ./portal	Main project directory
 │   │   ├── ./src
 │   │   │   ├── ./config	Contains portal configurations, routing, SQL strings to obtain Synapse data, etc.	
 │   │   │   │   ├── ./style	Add style overrides here such as button colors, header background image, and etc.
