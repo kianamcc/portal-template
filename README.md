@@ -134,10 +134,10 @@ client_meta_data = {
   'client_name': 'gf-portal',
   # Refer to section below for setting up redirect_uris
   'redirect_uris': [
-    'https://gray-portal.vercel.app',
     'http://127.0.0.1:3000',
+    'https://synapse-portal-template.vercel.app',
   ],
-  'sector_identifier_uri': "https://gray-portal.vercel.app/redirect_uris.json"
+  'sector_identifier_uri': "https://synapse-portal-template.vercel.app/redirect_uris.json"
 }
 
 # Create the client:
