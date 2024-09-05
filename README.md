@@ -171,6 +171,120 @@ When signed out of the portal template website, users can view datasets and file
 
 Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html for more information about the different data access types in Synapse.
 
+## Forms
+
+### Creating a Form Group
+
+Create a form group to start using Synapse Form Services. A form group is a collection of forms that you can manage and access through the Synapse API.
+
+### Updating the ACL
+
+### Reviewing Forms
+
+Access and review forms on administrator account that has READ_PRIVATE_SUBMISSION.
+
+<img width="700" alt="Screenshot 2024-09-05 at 11 59 34 AM" src="https://github.com/user-attachments/assets/30f15ad6-bf4d-4586-899a-58805213094b">
+
+1. Access a list of forms for a specific form group: https://rest-docs.synapse.org/rest/POST/form/data/list/reviewer.html.
+
+```
+ const fetchFormData = async (groupId: string) => {
+    const url =
+      "https://repo-prod.prod.sagebase.org/repo/v1/form/data/list/reviewer";
+
+    const requestBody = {
+      groupId: groupId,
+      filterByState: ["SUBMITTED_WAITING_FOR_REVIEW"],
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `An error occured. ${response.status}: ${response.statusText}`
+        );
+      }
+
+      console.log(`Successfully fetched forms from form group ${groupId}.`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+```
+
+Your response will look something like this:
+
+<img width="424" alt="Screenshot 2024-09-05 at 1 31 23 PM" src="https://github.com/user-attachments/assets/a30431ed-36fb-41a6-80e3-543e8aec4c59">
+
+2. Accept forms: https://rest-docs.synapse.org/rest/PUT/form/data/id/accept.html, or reject forms: https://rest-docs.synapse.org/rest/PUT/form/data/id/reject.html.
+
+```
+  const acceptForm = async (id: string) => {
+    const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/data/${id}/accept`;
+
+    try {
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+      });
+
+      if (!response.ok) {
+        `An error occured. ${response.status}: ${response.statusText}`;
+      }
+
+      console.log(`Form ${id} has been successfully accepted.`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+```
+
+<img width="700" alt="Screenshot 2024-09-05 at 12 02 16 PM" src="https://github.com/user-attachments/assets/b6b38d9a-437a-4d5f-809b-36292ac75f9a">
+
+
+```
+  const rejectForm = async (id: string, reason: string) => {
+    const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/data/${id}/reject`;
+
+    const requestBody = {
+      reason,
+    };
+
+    try {
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        `An error occured. ${response.status}: ${response.statusText}`;
+      }
+
+      console.log(`Form ${id} has been successfully rejected.`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+```
+
+<img width="700" alt="Screenshot 2024-09-05 at 11 53 52 AM" src="https://github.com/user-attachments/assets/148ccae5-e9b5-44ba-acf6-eb6cf4e4b071">
+
+
 ## CI/CD
 
 Continuous Integration and Continuous Development (CI/CD) is implemented for this portal using GitHub Actions and Vercel.
