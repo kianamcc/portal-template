@@ -101,7 +101,7 @@ const routes: GenericRoute[] = [
             name: "SynapseFormSubmissionGrid",
             props: {
               pathpart: "/Apply/FormSubmission",
-              formGroupId: "9",
+              formGroupId: "61",
               itemNoun: "Submission",
               formClass: "apply-form",
             },
@@ -116,11 +116,11 @@ const routes: GenericRoute[] = [
           {
             name: "SynapseFormWrapper",
             props: {
-              fileNamePath: "form",
+              fileNamePath: "name.submission_name",
               formSchemaEntityId: "syn62691891",
               formUiSchemaEntityId: "syn62691901",
               formNavSchemaEntityId: "syn62691881",
-              formTitle: "Your Submission",
+              formTitle: "Project Submission",
               formClass: "apply-form",
             },
           },
