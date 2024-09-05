@@ -177,7 +177,117 @@ Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html 
 
 Create a form group to start using Synapse Form Services. A form group is a collection of forms that you can manage and access through the Synapse API.
 
+```
+  const createFormGroup = async (name: string, token: string) => {
+    const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/group?name=${encodeURIComponent(
+      name
+    )}`;
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `An error occured. ${response.status}: ${response.statusText}`
+      );
+    }
+
+    console.log("Successfully created form group.");
+    const data: FormGroup = await response.json();
+    return data;
+  };
+```
+
+Your response will look something like this:
+
+<img width="310" alt="Screenshot 2024-09-05 at 3 24 08 PM" src="https://github.com/user-attachments/assets/b5a93a51-dd04-4635-9d36-3f48f9a5b907">
+
 ### Updating the ACL
+
+To allow other users other than the administrator (creator of the form group), we need to update the ACL for the form group: https://rest-docs.synapse.org/rest/PUT/form/group/id/acl.html.
+
+1. Get the form group's ACL to obtain the etag (identifier that represents a specific version of a resource).
+
+```
+  const fetchCurrentACL = async (groupId: string, accessToken: string) => {
+    const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/group/${groupId}/acl`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Error fetching ACL: ${response.status}: ${response.statusText}`
+      );
+    }
+
+    return response.json();
+  };
+```
+
+2. Use the result from the previous function to update the ACL for the form group: https://rest-docs.synapse.org/rest/PUT/form/group/id/acl.html. Your principalId can be in the response when creating a form group (value of _createdBy_).
+
+```
+  interface ACLUpdateData {
+    resourceAccess: Array<{
+      principalId: string;
+      accessType: Array<string>;
+    }>;
+    etag: string;
+  }
+
+  const updateACL = async (
+    aclData: ACLUpdateData,
+    groupId: string,
+    accessToken: string
+  ) => {
+    const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/group/${groupId}/acl`;
+
+    const updatedAclData = {
+      ...aclData,
+      resourceAccess: [
+        ...aclData.resourceAccess,
+        {
+          principalId: "273948", // Represents authenticated users (273949 represents all users, authenticated or not)
+          accessType: ["READ", "SUBMIT"], // Give authorized users READ and SUBMIT access
+        },
+        {
+          principalId: "3503364",
+          accessType: [
+            "READ",
+            "SUBMIT",
+            "CHANGE_PERMISSIONS",
+            "READ_PRIVATE_SUBMISSION",
+          ], // Administrator gets full access
+        },
+      ],
+    };
+
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(updatedAclData),
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `Error updating ACL: ${response.status}: ${response.statusText}`
+      );
+    }
+  };
+```
 
 ### Reviewing Forms
 
