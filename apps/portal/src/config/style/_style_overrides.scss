@@ -91,7 +91,18 @@ td .MuiLink-root,
   }
 }
 
+.SRC-ReactJsonForm .unauthenticated {
+  button {
+    background-color: #d4a373 !important;
+  }
+
+  button:hover {
+    background-color: #c89766;
+  }
+}
+
 .MuiSvgIcon-root {
   color: #d4a373 !important;
 }
+
 // End Apply
