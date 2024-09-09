@@ -73,7 +73,7 @@ function Navbar() {
 
   const redirectToSynapseLogin = () => {
     const redirect_uri = encodeURIComponent(document.location.origin);
-    const scope = encodeURIComponent("openid email view download");
+    const scope = encodeURIComponent("openid email view download modify");
 
     const test = `https://signin.synapse.org/?response_type=code&client_id=${
       import.meta.env.VITE_PORTAL_CLIENT
