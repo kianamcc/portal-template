@@ -8,8 +8,10 @@ import { Redirect } from "react-router-dom";
 import Header from "./Header";
 import ProjectDiscussionForum from "./ProjectDiscussionForum";
 import SynapseComponentCollapse from "./SynapseComponentCollapse";
+import NetworkPage from "./networkPage";
 
 const PortalComponents = {
+  NetworkPage,
   RouteControlWrapper,
   DetailsPage,
   Image,

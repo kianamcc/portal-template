@@ -16,6 +16,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PortalProps } from "./components/PortalProps";
 import { PortalContextProvider } from "./components/PortalContext";
 
+import NetworkPage from "./components/networkPage";
+
 const RouteResolver = React.lazy(() => import("./components/RouteResolver"));
 const queryClient = new QueryClient(defaultQueryClientConfig);
 
@@ -39,6 +41,7 @@ function App(props: PortalProps) {
                   <main className="main">
                     <React.Suspense fallback={<div />}>
                       <Switch>
+                        <Route path="/network" component={NetworkPage} />
                         <RouteResolver />
                       </Switch>
                     </React.Suspense>

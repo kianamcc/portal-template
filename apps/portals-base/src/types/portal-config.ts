@@ -35,6 +35,7 @@ import { CSSProperties } from "react";
 import { TabbedSynapseObjectsProps } from "../components/TabbedSynapseObjects";
 import { RedirectToURLProps } from "../components/RedirectToURL";
 import { SynapseComponentCollapseProps } from "../components/SynapseComponentCollapse";
+import { NetworkProps } from "src/components/networkPage";
 
 // For styling the header on the home page -- the main title and the summary text
 export type HomePageHeaderConfig = {
@@ -46,6 +47,12 @@ export type HomePageHeaderConfig = {
 };
 
 // Generic SynapseConfigArray Representation -- maps each component to its props
+
+type NetworkPage = {
+  props: NetworkProps;
+  name: "NetworkPage";
+};
+
 type CardContainerLogic = {
   props: CardContainerLogicProps;
   name: "CardContainerLogic";
@@ -268,6 +275,7 @@ type Header = {
 };
 
 export type SynapseConfig = (
+  | NetworkPage
   | RedirectToURL
   | RedirectWithQuery
   | Redirect

@@ -3,6 +3,8 @@ import { GenericRoute } from "portals-base/types/portal-config";
 import routeControlWrapperProps from "./routeControlWrapperProps";
 import { datasetsDetailsPage } from "./synapseConfigs/datasets";
 
+import NetworkPage from "portals-base/components/networkPage";
+
 /**
  * This file defines the routing configuration for the application.
  *
@@ -79,6 +81,26 @@ const routes: GenericRoute[] = [
       {
         path: "Contributors",
         hideRouteFromNavbar: false,
+        synapseConfigArray: [
+          {
+            name: "NetworkPage",
+            props: {
+              component: NetworkPage,
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "Network",
+    exact: true,
+    synapseConfigArray: [
+      {
+        name: "NetworkPage",
+        props: {
+          component: NetworkPage,
+        },
       },
     ],
   },
