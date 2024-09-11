@@ -70,8 +70,8 @@ importers:
         specifier: ^5.3.4
         version: 5.3.4(react@18.3.1)
       synapse-react-client:
-        specifier: ^3.3.0
-        version: 3.3.3(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
+        specifier: ^3.3.11
+        version: 3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
       vite:
         specifier: ^5.1.6
         version: 5.3.4(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.3)
@@ -173,8 +173,8 @@ importers:
         specifier: ^1.71.1
         version: 1.77.8
       synapse-react-client:
-        specifier: ^3.3.0
-        version: 3.3.3(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2)
+        specifier: ^3.3.11
+        version: 3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2)
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.4.2
@@ -1214,8 +1214,8 @@ packages:
   '@sage-bionetworks/synapse-types@0.0.2':
     resolution: {integrity: sha512-31MxrIOnJiAUYeXsDsf2J+q9A6nVZt9pWGfG+pYoKC2vZIgUo7L3ToelYEqoufvdgHht+aWq83bnk/+Y4UNoUA==}
 
-  '@sage-bionetworks/synapse-types@0.0.3':
-    resolution: {integrity: sha512-7dtSxh3dOw+TsxM93YndVt6RP0m8UEpsT3lQ5DTvnV2SaPx5uzOgb6GB+mkj2DNL9Ys4O22VQccLvBOegpWLKg==}
+  '@sage-bionetworks/synapse-types@0.0.4':
+    resolution: {integrity: sha512-uezI0I4qGgHSC0z6SaxSuVCOnVdFx/+F5603ViEeQ1vAWdBzty+UHmMYW3G0EJlilX8vQqppJTNjR048e1YjIQ==}
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -3363,9 +3363,6 @@ packages:
   markdown-it-center-text@1.0.4:
     resolution: {integrity: sha512-7AA0gek4FYJ6gWB2kdGNx06k3GrlO97nEMY7uovQ70/6MtfqPznrgnKoWO3V4p36m3RT5GeQIFXqBH9Wr4iL/g==}
 
-  markdown-it-emphasis-alt@1.0.8:
-    resolution: {integrity: sha512-5oGI4i8YM3S7Nyn0u7n2I6XJaZIbjFmYrvhwo7En2yFXZW8UzBAJG/vkSJ985GRymuW0tgQgqcIdwPjuH74kzQ==}
-
   markdown-it-inline-comments@1.0.1:
     resolution: {integrity: sha512-gObNM3NumcpsU66pO2LmV8MGBfdfFp7TcYME9iuUGs82+JYJWMmBQtAj6/qho4OhKqpR0UX2JTkuuA2HPgHUtQ==}
 
@@ -4456,8 +4453,8 @@ packages:
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
-  synapse-react-client@3.3.3:
-    resolution: {integrity: sha512-u2rSzCJu+etfnD/G8XhbfRo7fNDKPFCbeCP8k+MGgcSFqu4nyWxjSxHTwXx9Byid6vevWxWUBEy1/+y78pTFGw==}
+  synapse-react-client@3.3.11:
+    resolution: {integrity: sha512-nZZWF6mwSqgTyHOlF6UfzWOi7BZjo2tGr6wY7vt4Urp9e6d9+1ArFtx8+BM+z2BNjfe6P/9VBr3eqXtb4ulhFA==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -5843,7 +5840,7 @@ snapshots:
 
   '@sage-bionetworks/synapse-types@0.0.2': {}
 
-  '@sage-bionetworks/synapse-types@0.0.3': {}
+  '@sage-bionetworks/synapse-types@0.0.4': {}
 
   '@sinclair/typebox@0.27.8': {}
 
@@ -8363,8 +8360,6 @@ snapshots:
 
   markdown-it-center-text@1.0.4: {}
 
-  markdown-it-emphasis-alt@1.0.8: {}
-
   markdown-it-inline-comments@1.0.1: {}
 
   markdown-it-strikethrough-alt@1.0.0: {}
@@ -9661,7 +9656,7 @@ snapshots:
 
   symbol-tree@3.2.4: {}
 
-  synapse-react-client@3.3.3(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2):
+  synapse-react-client@3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2):
     dependencies:
       '@apidevtools/json-schema-ref-parser': 9.1.2
       '@brainhubeu/react-carousel': 1.19.26(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9683,7 +9678,7 @@ snapshots:
       '@rjsf/validator-ajv8': 5.17.1(@rjsf/utils@5.17.1(react@18.3.1))
       '@sage-bionetworks/markdown-it-container': 4.0.1
       '@sage-bionetworks/react-base-table': 1.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sage-bionetworks/synapse-types': 0.0.3
+      '@sage-bionetworks/synapse-types': 0.0.4
       '@tanstack/query-core': 5.22.2
       '@tanstack/react-query': 5.22.2(react@18.3.1)
       '@tanstack/react-query-devtools': 5.24.0(@tanstack/react-query@5.22.2(react@18.3.1))(react@18.3.1)
@@ -9704,7 +9699,6 @@ snapshots:
       markdown-it: 14.1.0
       markdown-it-br: 1.0.0
       markdown-it-center-text: 1.0.4
-      markdown-it-emphasis-alt: 1.0.8
       markdown-it-inline-comments: 1.0.1
       markdown-it-strikethrough-alt: 1.0.0
       markdown-it-sub-alt: 1.0.0
@@ -9774,7 +9768,7 @@ snapshots:
       - supports-color
       - typescript
 
-  synapse-react-client@3.3.3(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3):
+  synapse-react-client@3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3):
     dependencies:
       '@apidevtools/json-schema-ref-parser': 9.1.2
       '@brainhubeu/react-carousel': 1.19.26(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9796,7 +9790,7 @@ snapshots:
       '@rjsf/validator-ajv8': 5.17.1(@rjsf/utils@5.17.1(react@18.3.1))
       '@sage-bionetworks/markdown-it-container': 4.0.1
       '@sage-bionetworks/react-base-table': 1.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sage-bionetworks/synapse-types': 0.0.3
+      '@sage-bionetworks/synapse-types': 0.0.4
       '@tanstack/query-core': 5.22.2
       '@tanstack/react-query': 5.22.2(react@18.3.1)
       '@tanstack/react-query-devtools': 5.24.0(@tanstack/react-query@5.22.2(react@18.3.1))(react@18.3.1)
@@ -9817,7 +9811,6 @@ snapshots:
       markdown-it: 14.1.0
       markdown-it-br: 1.0.0
       markdown-it-center-text: 1.0.4
-      markdown-it-emphasis-alt: 1.0.8
       markdown-it-inline-comments: 1.0.1
       markdown-it-strikethrough-alt: 1.0.0
       markdown-it-sub-alt: 1.0.0

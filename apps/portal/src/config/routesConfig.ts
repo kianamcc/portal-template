@@ -128,6 +128,24 @@ const routes: GenericRoute[] = [
       },
     ],
   },
+  {
+    path: "Apply2",
+    exact: true,
+    hideRouteFromNavbar: false,
+    synapseConfigArray: [
+      {
+        name: "DynamicForm",
+        props: {
+          schemaUrl:
+            "https://raw.githubusercontent.com/portal-template/main/schemas/form.json",
+          uiSchemaUrl:
+            "https://raw.githubusercontent.com/portal-template/main/schemas/formUi.json",
+          postUrl: "",
+        },
+        isOutsideContainer: false,
+      },
+    ],
+  },
 ];
 
 export default routes;

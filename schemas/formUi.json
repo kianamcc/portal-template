@@ -1,0 +1,22 @@
+{
+  "submitProject": {
+    "projects": {
+      "items": {
+        "projectName": {
+          "ui:placeholder": "Enter the name of the project"
+        },
+        "description": {
+          "ui:help": "Provide the name of your project.",
+          "ui:description": "",
+          "ui:placeholder": "Enter the name of your project"
+        },
+        "fileUpload": {
+          "ui:widget": "file"
+        }
+      },
+      "ui:options": {
+        "addButtonText": "Add Project"
+      }
+    }
+  }
+}
