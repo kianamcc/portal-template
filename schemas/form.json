@@ -3,6 +3,7 @@
   "type": "object",
   "properties": {
     "name": {
+      "title": "Name",
       "type": "object",
       "required": ["first_name", "last_name", "email"],
       "properties": {
@@ -23,6 +24,7 @@
     },
 
     "submitProject": {
+      "title": "Submit Project",
       "type": "object",
       "properties": {
         "projects": {
