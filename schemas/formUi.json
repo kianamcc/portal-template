@@ -3,10 +3,11 @@
     "projects": {
       "items": {
         "projectName": {
+          "ui:help": "Provide a name for your project.",
           "ui:placeholder": "Enter the name of the project"
         },
         "description": {
-          "ui:help": "Provide the name of your project.",
+          "ui:help": "Provide a description of your project.",
           "ui:description": "",
           "ui:placeholder": "Enter the name of your project"
         },

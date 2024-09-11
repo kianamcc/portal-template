@@ -129,7 +129,7 @@ const routes: GenericRoute[] = [
     ],
   },
   {
-    path: "Apply2",
+    path: "Dynamic Form",
     exact: true,
     hideRouteFromNavbar: false,
     synapseConfigArray: [
@@ -140,7 +140,7 @@ const routes: GenericRoute[] = [
             "https://raw.githubusercontent.com/kianamcc/portal-template/forms-feature/schemas/form.json",
           uiSchemaUrl:
             "https://raw.githubusercontent.com/kianamcc/portal-template/forms-feature/schemas/formUi.json",
-          postUrl: "",
+          postUrl: "https://submit-form.com/1mGwgZpqX",
         },
         isOutsideContainer: false,
       },

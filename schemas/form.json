@@ -1,5 +1,5 @@
 {
-  "title": "Submission Form for Portal Template",
+  "title": "Project Submission Form for Portal Template",
   "type": "object",
   "properties": {
     "name": {
@@ -24,7 +24,7 @@
     },
 
     "submitProject": {
-      "title": "Submit Project",
+      "title": "Project",
       "type": "object",
       "properties": {
         "projects": {
