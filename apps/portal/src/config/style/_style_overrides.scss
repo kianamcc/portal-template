@@ -104,5 +104,16 @@ td .MuiLink-root,
 .MuiSvgIcon-root {
   color: #d4a373 !important;
 }
-
 // End Apply
+
+// Dynamic Form
+.rjsf > .MuiBox-root {
+  button {
+    background-color: #d4a373 !important;
+  }
+
+  button:hover {
+    background-color: #c89766;
+  }
+}
+// End Dynamic Form
