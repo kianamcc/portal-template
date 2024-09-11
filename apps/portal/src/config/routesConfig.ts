@@ -137,9 +137,9 @@ const routes: GenericRoute[] = [
         name: "DynamicForm",
         props: {
           schemaUrl:
-            "https://raw.githubusercontent.com/portal-template/main/schemas/form.json",
+            "https://raw.githubusercontent.com/kianamcc/portal-template/forms-feature/schemas/form.json",
           uiSchemaUrl:
-            "https://raw.githubusercontent.com/portal-template/main/schemas/formUi.json",
+            "https://raw.githubusercontent.com/kianamcc/portal-template/forms-feature/schemas/formUi.json",
           postUrl: "",
         },
         isOutsideContainer: false,
