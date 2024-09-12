@@ -29,10 +29,6 @@
 }
 
 // Explore
-[aria-label="Explore Sections"] .MuiButtonBase-root {
-  color: #bac68f !important;
-}
-
 [aria-label="Explore Sections"] .Mui-selected {
   color: #bac68f !important;
   border-bottom-color: #bac68f !important;
@@ -84,3 +80,41 @@ td .MuiLink-root,
   }
 }
 // End Goals
+
+// Apply
+.SRC-ReactJsonForm .MuiBox-root {
+  a {
+    background-color: #d4a373 !important;
+
+    &:hover {
+      background-color: #c89766;
+    }
+  }
+}
+
+.SRC-ReactJsonForm .unauthenticated {
+  button {
+    background-color: #d4a373 !important;
+  }
+
+  button:hover {
+    background-color: #c89766;
+  }
+}
+
+.MuiSvgIcon-root {
+  color: #d4a373 !important;
+}
+// End Apply
+
+// Dynamic Form
+.rjsf > .MuiBox-root {
+  button {
+    background-color: #d4a373 !important;
+  }
+
+  button:hover {
+    background-color: #c89766;
+  }
+}
+// End Dynamic Form

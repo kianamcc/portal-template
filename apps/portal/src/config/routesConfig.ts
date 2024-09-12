@@ -82,6 +82,71 @@ const routes: GenericRoute[] = [
       },
     ],
   },
+  {
+    path: "OldApply",
+    hideRouteFromNavbar: true,
+    routes: [
+      {
+        path: "",
+        exact: true,
+        hideRouteFromNavbar: true,
+        synapseConfigArray: [
+          {
+            name: "Markdown",
+            props: {
+              ownerId: "syn60582629",
+              wikiId: "629468",
+            },
+          },
+          {
+            name: "SynapseFormSubmissionGrid",
+            props: {
+              pathpart: "/Apply/FormSubmission",
+              formGroupId: "61",
+              itemNoun: "Submission",
+              formClass: "apply-form",
+            },
+          },
+        ],
+      },
+      {
+        exact: true,
+        hideRouteFromNavbar: true,
+        path: "FormSubmission",
+        synapseConfigArray: [
+          {
+            name: "SynapseFormWrapper",
+            props: {
+              fileNamePath: "name.submission_name",
+              formSchemaEntityId: "syn62691891",
+              formUiSchemaEntityId: "syn62691901",
+              formNavSchemaEntityId: "syn62691881",
+              formTitle: "Project Submission",
+              formClass: "apply-form",
+            },
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "Apply",
+    exact: true,
+    hideRouteFromNavbar: false,
+    synapseConfigArray: [
+      {
+        name: "DynamicForm",
+        props: {
+          schemaUrl:
+            "https://raw.githubusercontent.com/kianamcc/portal-template/main/schemas/form.json",
+          uiSchemaUrl:
+            "https://raw.githubusercontent.com/kianamcc/portal-template/main/schemas/formUi.json",
+          postUrl: "https://submit-form.com/1mGwgZpqX",
+        },
+        isOutsideContainer: false,
+      },
+    ],
+  },
 ];
 
 export default routes;

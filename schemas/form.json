@@ -1,0 +1,55 @@
+{
+  "title": "Project Submission Form for Portal Template",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Name",
+      "type": "object",
+      "required": ["first_name", "last_name", "email"],
+      "properties": {
+        "first_name": {
+          "type": "string",
+          "title": "First Name"
+        },
+        "last_name": {
+          "type": "string",
+          "title": "Last Name"
+        },
+        "email": {
+          "type": "string",
+          "title": "Contact Email",
+          "format": "email"
+        }
+      }
+    },
+
+    "submitProject": {
+      "title": "Project",
+      "type": "object",
+      "properties": {
+        "projects": {
+          "type": "array",
+          "title": "Add Projects",
+          "items": {
+            "type": "object",
+            "required": ["projectName", "description"],
+            "properties": {
+              "projectName": {
+                "type": "string",
+                "title": "Project Name"
+              },
+              "description": {
+                "type": "string",
+                "title": "Project Description"
+              },
+              "fileUpload": {
+                "type": "string",
+                "title": "Associated File"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

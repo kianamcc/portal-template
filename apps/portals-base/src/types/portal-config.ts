@@ -25,6 +25,7 @@ import {
   UserCardListGroupsProps,
   UserCardListRotateProps,
   UserCardProps,
+  DynamicFormProps,
 } from "synapse-react-client";
 import { RouteControlWrapperProps } from "../components/RouteControlWrapper";
 import { DetailsPageProps } from "./portal-util-types";
@@ -49,6 +50,11 @@ export type HomePageHeaderConfig = {
 type CardContainerLogic = {
   props: CardContainerLogicProps;
   name: "CardContainerLogic";
+};
+
+type DynamicForm = {
+  name: "DynamicForm";
+  props: DynamicFormProps;
 };
 
 type QueryWrapper = {
@@ -313,6 +319,7 @@ export type SynapseConfig = (
   | ChallengeDetailPageWrapper
   | ChallengeDataDownloadWrapper
   | TimelinePlot
+  | DynamicForm
 ) &
   Metadata;
 

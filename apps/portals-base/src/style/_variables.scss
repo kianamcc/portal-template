@@ -1,9 +1,10 @@
 // Variables used in Portals SCSS should be defined in this file.
+// Base definitions
 
-$primary-action-color: rgb(64, 123, 160) !default;
-$secondary-action-color: rgb(98, 172, 98) !default;
-$header-url: '' !default;
-$footer-url: '' !default;
+$primary-action-color: #bac68f !default;
+$secondary-action-color: #bac68f !default;
+$header-url: "" !default;
+$footer-url: "" !default;
 $dark-gray: #1a1c29;
 $header-height: 75px;
 $banner-height: 47px;
@@ -11,7 +12,7 @@ $border-color-gray: #dcdcdc;
 
 // Since scss breaks if a file is missing in a local url link these functions must get manually overwitten
 @function getHeader() {
-  @if $header-url == '' {
+  @if $header-url == "" {
     @return none;
   } @else {
     @return url($header-url);
@@ -19,7 +20,7 @@ $border-color-gray: #dcdcdc;
 }
 
 @function getFooter() {
-  @if $footer-url == '' {
+  @if $footer-url == "" {
     @return none;
   } @else {
     @return url($footer-url);
