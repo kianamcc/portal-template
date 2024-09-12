@@ -173,7 +173,36 @@ Please refer to https://help.synapse.org/docs/Data-Access-Types.2014904611.html 
 
 ## Forms
 
-### Creating a Form Group
+You can create forms using your own service or Synapse Form Services.
+
+### Using Your Own Service
+
+The DynamicForm component allows you to submit form data to a third-party service. This component accepts a URL for the schema JSON, the UI schema JSON, and the endpoint to which the form data will be submitted to. For the code snippet below, we use [formspark.io](https://formspark.io) as our postUrl to submit our form data to.
+
+```
+  {
+    path: "Apply",
+    exact: true,
+    hideRouteFromNavbar: false,
+    synapseConfigArray: [
+      {
+        name: "DynamicForm",
+        props: {
+          schemaUrl:
+            "https://raw.githubusercontent.com/kianamcc/portal-template/main/schemas/form.json",
+          uiSchemaUrl:
+            "https://raw.githubusercontent.com/kianamcc/portal-template/main/schemas/formUi.json",
+          postUrl: "https://submit-form.com/1mGwgZpqX",
+        },
+        isOutsideContainer: false,
+      },
+    ],
+  },
+```
+
+### Using Synapse Form Services
+
+#### Creating a Form Group
 
 Create a form group to start using Synapse Form Services. A form group is a collection of forms that you can manage and access through the Synapse API.
 
@@ -207,7 +236,7 @@ Your response will look something like this:
 
 <img width="310" alt="Screenshot 2024-09-05 at 3 24 08 PM" src="https://github.com/user-attachments/assets/b5a93a51-dd04-4635-9d36-3f48f9a5b907">
 
-### Updating the ACL
+#### Updating the ACL
 
 To allow other users other than the administrator (creator of the form group), we need to update the ACL for the form group: https://rest-docs.synapse.org/rest/PUT/form/group/id/acl.html.
 
@@ -289,7 +318,7 @@ To allow other users other than the administrator (creator of the form group), w
   };
 ```
 
-### Reviewing Forms
+#### Reviewing Forms
 
 Access and review forms on administrator account that has READ_PRIVATE_SUBMISSION.
 
@@ -394,7 +423,6 @@ Your response will look something like this:
 
 <img width="700" alt="Screenshot 2024-09-05 at 11 53 52 AM" src="https://github.com/user-attachments/assets/148ccae5-e9b5-44ba-acf6-eb6cf4e4b071">
 
-
 ## CI/CD
 
 Continuous Integration and Continuous Development (CI/CD) is implemented for this portal using GitHub Actions and Vercel.
@@ -435,6 +463,7 @@ Vercel creates unique URLs for each preview which results in not being able to u
 
 ## Resources
 
+- [Associated PR](https://github.com/Sage-Bionetworks/synapse-web-monorepo/pull/925)
 - [synapse.org](https://www.synapse.org)
 - [Synapse Web Monorepo (GitHub)](https://github.com/Sage-Bionetworks/synapse-web-monorepo/tree/main)
 - [Synapse React Client (Storybook)](https://sage-bionetworks.github.io/synapse-web-monorepo/?path=/story/components-addconditionsforusebutton--demo)
