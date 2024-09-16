@@ -130,6 +130,23 @@ const routes: GenericRoute[] = [
     ],
   },
   {
+    path: "Chat",
+    exact: true,
+    hideRouteFromNavbar: false,
+    synapseConfigArray: [
+      {
+        name: "SynapseChat",
+        props: {
+          initialMessage: "Welcome to the chat!",
+          agentId: "your-agent-id",
+          chatbotName: "SupportBot",
+          hideTitle: false,
+          textboxPositionOffset: "50px",
+        },
+      },
+    ],
+  },
+  {
     path: "Apply",
     exact: true,
     hideRouteFromNavbar: false,
@@ -145,6 +162,15 @@ const routes: GenericRoute[] = [
         },
         isOutsideContainer: false,
       },
+      // initialMessage?: string;
+      // agentId?: string;
+      // chatbotName?: string;
+      // hideTitle?: boolean;
+      // textboxPositionOffset?: string;
+      // {
+      //   name: "SynapseChat",
+      //   props: { initialMessage: "hello", textboxPositionOffset: "0px" },
+      // },
     ],
   },
 ];
