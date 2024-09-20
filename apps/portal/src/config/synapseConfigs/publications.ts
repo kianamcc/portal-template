@@ -1,5 +1,5 @@
 import { SynapseConstants } from "synapse-react-client";
-import { SynapseConfig } from "portals-base/types/portal-config";
+import { SynapseConfig } from "portal-base/types/portal-config";
 import type { CardConfiguration } from "synapse-react-client";
 
 import { publicationsSql } from "../resources";

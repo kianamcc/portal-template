@@ -1,4 +1,4 @@
-import { HomePageHeaderConfig } from "portals-base/types/portal-config";
+import { HomePageHeaderConfig } from "portal-base/types/portal-config";
 
 const homePageHeader: HomePageHeaderConfig = {
   title: "Welcome to the Synapse Portal Template",
