@@ -72,19 +72,17 @@ function Navbar() {
   };
 
   const redirectToSynapseLogin = () => {
-    const redirect_uri = encodeURIComponent(document.location.origin);
+    const redirect_uri = encodeURIComponent(window.location.origin);
     const scope = encodeURIComponent("openid email view download modify");
-
-    const test = `https://signin.synapse.org/?response_type=code&client_id=${
+    window.location.href = `https://signin.synapse.org/?response_type=code&client_id=${
       import.meta.env.VITE_PORTAL_CLIENT
     }&scope=${scope}&redirect_uri=${redirect_uri}`;
-
-    window.location = test as unknown as Location;
   };
 
   const handleOAuth = async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const authorizationCode = urlParams.get("code");
+    const authorizationCode = new URLSearchParams(window.location.search).get(
+      "code"
+    );
     const redirect_uri = window.location.origin;
 
     const url = "https://repo-prod.prod.sagebase.org/auth/v1/oauth2/token";
