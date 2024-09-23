@@ -49,8 +49,8 @@ importers:
   apps/portal:
     dependencies:
       '@sage-bionetworks/synapse-types':
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.2
+        version: 0.0.2
       katex:
         specifier: ^0.16.10
         version: 0.16.11
@@ -70,8 +70,8 @@ importers:
         specifier: ^5.3.4
         version: 5.3.4(react@18.3.1)
       synapse-react-client:
-        specifier: ^3.3.16
-        version: 3.3.16(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
+        specifier: ^3.3.11
+        version: 3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
       vite:
         specifier: ^5.1.6
         version: 5.3.4(@types/node@22.2.0)(sass@1.77.8)(terser@5.31.3)
@@ -119,8 +119,8 @@ importers:
         specifier: ^23.1.0
         version: 23.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@sage-bionetworks/synapse-types':
-        specifier: ^0.0.4
-        version: 0.0.4
+        specifier: ^0.0.2
+        version: 0.0.2
       '@tanstack/react-query':
         specifier: 5.22.2
         version: 5.22.2(react@18.3.1)
@@ -173,8 +173,8 @@ importers:
         specifier: ^1.71.1
         version: 1.77.8
       synapse-react-client:
-        specifier: ^3.3.16
-        version: 3.3.16(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2)
+        specifier: ^3.3.11
+        version: 3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2)
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.4.2
@@ -1211,8 +1211,8 @@ packages:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  '@sage-bionetworks/synapse-client@0.0.1':
-    resolution: {integrity: sha512-z8VAeORuv5SrJeqO4SZMrkiXTgFoitNvpjzYUA/O7gJ9Zmyhe1utOxsJrJkRWcfoP7WwIGmoBkV5datWYzjDTw==}
+  '@sage-bionetworks/synapse-types@0.0.2':
+    resolution: {integrity: sha512-31MxrIOnJiAUYeXsDsf2J+q9A6nVZt9pWGfG+pYoKC2vZIgUo7L3ToelYEqoufvdgHht+aWq83bnk/+Y4UNoUA==}
 
   '@sage-bionetworks/synapse-types@0.0.4':
     resolution: {integrity: sha512-uezI0I4qGgHSC0z6SaxSuVCOnVdFx/+F5603ViEeQ1vAWdBzty+UHmMYW3G0EJlilX8vQqppJTNjR048e1YjIQ==}
@@ -4453,8 +4453,8 @@ packages:
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
-  synapse-react-client@3.3.16:
-    resolution: {integrity: sha512-6mkxA4H4D2WMUnSFZE1nI74ZWoBdz+tAX+gBeP2ieBRz1Zeui2Y57fwVfKqSTlwgtyw78pQpSPb3LQoA4EzTXA==}
+  synapse-react-client@3.3.11:
+    resolution: {integrity: sha512-nZZWF6mwSqgTyHOlF6UfzWOi7BZjo2tGr6wY7vt4Urp9e6d9+1ArFtx8+BM+z2BNjfe6P/9VBr3eqXtb4ulhFA==}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -5838,7 +5838,7 @@ snapshots:
       react-virtualized-auto-sizer: 1.0.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-window: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  '@sage-bionetworks/synapse-client@0.0.1': {}
+  '@sage-bionetworks/synapse-types@0.0.2': {}
 
   '@sage-bionetworks/synapse-types@0.0.4': {}
 
@@ -6401,7 +6401,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@types/node@18.19.41)(@vitest/ui@1.6.0)(jsdom@21.1.2)(sass@1.77.8)(terser@5.31.3)
+      vitest: 1.6.0(@types/node@22.2.0)(@vitest/ui@1.6.0)(jsdom@21.1.2)(sass@1.77.8)(terser@5.31.3)
 
   '@vitest/utils@1.6.0':
     dependencies:
@@ -9656,7 +9656,7 @@ snapshots:
 
   symbol-tree@3.2.4: {}
 
-  synapse-react-client@3.3.16(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2):
+  synapse-react-client@3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2):
     dependencies:
       '@apidevtools/json-schema-ref-parser': 9.1.2
       '@brainhubeu/react-carousel': 1.19.26(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9678,7 +9678,6 @@ snapshots:
       '@rjsf/validator-ajv8': 5.17.1(@rjsf/utils@5.17.1(react@18.3.1))
       '@sage-bionetworks/markdown-it-container': 4.0.1
       '@sage-bionetworks/react-base-table': 1.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sage-bionetworks/synapse-client': 0.0.1
       '@sage-bionetworks/synapse-types': 0.0.4
       '@tanstack/query-core': 5.22.2
       '@tanstack/react-query': 5.22.2(react@18.3.1)
@@ -9769,7 +9768,7 @@ snapshots:
       - supports-color
       - typescript
 
-  synapse-react-client@3.3.16(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3):
+  synapse-react-client@3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3):
     dependencies:
       '@apidevtools/json-schema-ref-parser': 9.1.2
       '@brainhubeu/react-carousel': 1.19.26(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9791,7 +9790,6 @@ snapshots:
       '@rjsf/validator-ajv8': 5.17.1(@rjsf/utils@5.17.1(react@18.3.1))
       '@sage-bionetworks/markdown-it-container': 4.0.1
       '@sage-bionetworks/react-base-table': 1.13.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@sage-bionetworks/synapse-client': 0.0.1
       '@sage-bionetworks/synapse-types': 0.0.4
       '@tanstack/query-core': 5.22.2
       '@tanstack/react-query': 5.22.2(react@18.3.1)
