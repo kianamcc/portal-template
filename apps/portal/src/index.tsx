@@ -1,21 +1,21 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from 'portals-base/App'
-import palette from './config/paletteConfig'
-import routes from './config/routesConfig'
-import footerConfig from './config/footerConfig'
-import logoHeaderConfig from './config/logoHeaderConfig'
-import logoFooterConfig from './config/logoFooterConfig'
-import headerConfig from './config/headerConfig'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "portal-base/App";
+import palette from "./config/paletteConfig";
+import routes from "./config/routesConfig";
+import footerConfig from "./config/footerConfig";
+import logoHeaderConfig from "./config/logoHeaderConfig";
+import logoFooterConfig from "./config/logoFooterConfig";
+import headerConfig from "./config/headerConfig";
 
 // KaTeX CSS is not included in the SRC style bundle since it includes many large font files.
-import 'katex/dist/katex.css'
+import "katex/dist/katex.css";
 
-import './App.scss'
+import "./App.scss";
 
-const container = document.getElementById('root')
+const container = document.getElementById("root");
 
-const root = createRoot(container!)
+const root = createRoot(container!);
 
 root.render(
   <React.StrictMode>
@@ -28,5 +28,5 @@ root.render(
       logoHeaderConfig={logoHeaderConfig}
       logoFooterConfig={logoFooterConfig}
     />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

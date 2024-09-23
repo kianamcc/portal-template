@@ -1,4 +1,4 @@
-import { FooterConfig } from "portals-base/types/portal-config";
+import { FooterConfig } from "portal-base/types/portal-config";
 
 const footer: FooterConfig = {
   contactUs: "https://google.com",

@@ -1,5 +1,5 @@
-import { Palettes } from 'synapse-react-client'
+import { Palettes } from "synapse-react-client";
 
-const templatePalette = Palettes.sageBionetworksPalette
+const templatePalette = Palettes.sageBionetworksPalette;
 
-export default templatePalette
+export default templatePalette;

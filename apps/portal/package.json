@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@sage-bionetworks/synapse-types": "^0.0.2",
+    "@sage-bionetworks/synapse-types": "^0.0.4",
     "katex": "^0.16.10",
     "pluralize": "^8.0.0",
-    "portals-base": "workspace:*",
+    "portal-base": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",

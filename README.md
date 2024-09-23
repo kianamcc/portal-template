@@ -48,25 +48,28 @@ This is a template repository so you can easily create a new repository based on
    cd portal
    pnpm build
    ```
-  
-6. To run, in the root of the project, use the following commands:
+
+5. To run, in the root of the project, use the following commands:
    ```bash
    pnpm i
    pnpm dev
    ```
+
 ## Project Code Structure
+
 Refer to the [Synapse Web Monorepo (GitHub)](https://github.com/Sage-Bionetworks/synapse-web-monorepo/tree/main) for code context.
 
 Reference to some of the key areas of the project:
+
 ```
 ├── ./.github	GitHub workflows and actions can be found here
 ├── ./apps
 │   ├── ./portal	Main project directory
 │   │   ├── ./src
-│   │   │   ├── ./config	Contains portal configurations, routing, SQL strings to obtain Synapse data, etc.	
+│   │   │   ├── ./config	Contains portal configurations, routing, SQL strings to obtain Synapse data, etc.
 │   │   │   │   ├── ./style	Add style overrides here such as button colors, header background image, and etc.
 │   │   │   │   ├── ./synapseConfigs	Contains data display configurations
-│   ├── ./portals-base	This directory serves as the foundation of the portal, providing essential components and infrastructure
+│   ├── ./portal-base	This directory serves as the foundation of the portal, providing essential components and infrastructure
 │   └── ./portals-e2e	Test directory
 ```
 
@@ -104,6 +107,7 @@ By using Synapse as the OAuth provider, we can simplify the authentication proce
 To create a new OAuth client with Synapse, you can do so directly from the Synapse website or the Python and R clients.
 
 ### Make a Synapse OAuth Client in synapse.org
+
 1. First, login to [Synapse](https://www.synapse.org).
 
 2. Click on your user icon then navigate to "Account Settings" > "OAuth Clients" > "Manage OAuth Clients" then click the "Create New Client" button. This will open up a popup form. Fill in the popup form and click save.
@@ -111,7 +115,7 @@ To create a new OAuth client with Synapse, you can do so directly from the Synap
 <img width="700" alt="Screenshot 2024-08-28 at 1 09 30 PM" src="https://github.com/user-attachments/assets/3beca915-42c3-4be9-8811-ce298b609936">
 
 3. Take note of your client ID and secret.
-<img width="700" alt="Screenshot 2024-08-02 at 4 05 07 PM" src="https://github.com/user-attachments/assets/09619cbb-01b5-49aa-9e07-fe396668bdad">
+   <img width="700" alt="Screenshot 2024-08-02 at 4 05 07 PM" src="https://github.com/user-attachments/assets/09619cbb-01b5-49aa-9e07-fe396668bdad">
 
 4. You must have your OAuth Client verified in order to use it. Click on the "Submit Verification" button for your newly created OAuth Client under the "Verified Column" and follow the instructions.
 
@@ -151,13 +155,13 @@ client_meta_data = {
 }
 
 # Create the client:
-client_meta_data = syn.restPOST(uri='/oauth2/client', 
+client_meta_data = syn.restPOST(uri='/oauth2/client',
 	endpoint=syn.authEndpoint, body=json.dumps(client_meta_data))
 
 client_id = client_meta_data['client_id']
 
 # Generate and retrieve the client secret:
-client_id_and_secret = syn.restPOST(uri='/oauth2/client/secret/'+client_id, 
+client_id_and_secret = syn.restPOST(uri='/oauth2/client/secret/'+client_id,
 	endpoint=syn.authEndpoint, body='')
 
 print(client_id_and_secret)
@@ -391,7 +395,6 @@ Your response will look something like this:
 
 <img width="700" alt="Screenshot 2024-09-05 at 12 02 16 PM" src="https://github.com/user-attachments/assets/b6b38d9a-437a-4d5f-809b-36292ac75f9a">
 
-
 ```
   const rejectForm = async (id: string, reason: string) => {
     const url = `https://repo-prod.prod.sagebase.org/repo/v1/form/data/${id}/reject`;
@@ -428,10 +431,12 @@ Your response will look something like this:
 Continuous Integration and Continuous Development (CI/CD) is implemented for this portal using GitHub Actions and Vercel.
 
 Actions:
+
 - action.yml
   - Responsible for installing the correct version of Node.js, configuring Pnpm and caching dependencies.
 
 Workflows:
+
 - end-to-end-test-portals.yml
   - Retrieves latest codebase, uses the Pnpm setup action to make sure dependencies are installed, builds the portal project, installs and sets up Playwright Browsers for testing, runs end-to-end tests, and uploads test results as artifacts.
 
@@ -469,6 +474,6 @@ Vercel creates unique URLs for each preview which results in not being able to u
 - [Synapse React Client (Storybook)](https://sage-bionetworks.github.io/synapse-web-monorepo/?path=/story/components-addconditionsforusebutton--demo)
 - [Synapse Docs](https://help.synapse.org/docs/)
 - [Synapse Python Client](https://python-docs.synapse.org)
-- [GitHub Actions](https://docs.github.com/en/actions) 
-- [Playwright](https://playwright.dev) 
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [Playwright](https://playwright.dev)
 - [Vercel](https://vercel.com)

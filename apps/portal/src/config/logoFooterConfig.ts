@@ -1,4 +1,4 @@
-import { LogoConfig } from "portals-base/types/portal-config";
+import { LogoConfig } from "portal-base/types/portal-config";
 
 const logoHeader: LogoConfig = {};
 export default logoHeader;

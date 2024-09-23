@@ -1,8 +1,8 @@
 import { datasetsSql } from "../resources";
-import { SynapseConfig } from "portals-base/types/portal-config";
+import { SynapseConfig } from "portal-base/types/portal-config";
 import { CardConfiguration, SynapseConstants } from "synapse-react-client";
 import { ColumnSingleValueFilterOperator } from "@sage-bionetworks/synapse-types";
-import { DetailsPageProps } from "portals-base/types/portal-util-types";
+import { DetailsPageProps } from "portal-base/types/portal-util-types";
 
 export const newDatasetsSql = `${datasetsSql} order by ROW_ID desc limit 3`;
 const rgbIndex = 8;

@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "types": ["vite/client"],
     "paths": {
-      "portals-base/*": ["../portals-base/src/*"]
+      "portal-base/*": ["../portal-base/src/*"]
     }
   },
   "include": ["src/**/*.tsx", "src/**/*.ts"],
