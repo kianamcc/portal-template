@@ -27,7 +27,7 @@
     "react-spinners": "^0.13.8",
     "react-switch": "^7.0.0",
     "sass": "^1.71.1",
-    "synapse-react-client": "^3.3.11"
+    "synapse-react-client": "^3.3.16"
   },
   "scripts": {
     "clean": "rimraf coverage",
