@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@sage-bionetworks/synapse-types": "^0.0.2",
+    "@sage-bionetworks/synapse-types": "^0.0.4",
     "katex": "^0.16.10",
     "pluralize": "^8.0.0",
     "portal-base": "workspace:*",

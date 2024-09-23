@@ -49,8 +49,8 @@ importers:
   apps/portal:
     dependencies:
       '@sage-bionetworks/synapse-types':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.4
+        version: 0.0.4
       katex:
         specifier: ^0.16.10
         version: 0.16.11
@@ -119,8 +119,8 @@ importers:
         specifier: ^23.1.0
         version: 23.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@sage-bionetworks/synapse-types':
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.4
+        version: 0.0.4
       '@tanstack/react-query':
         specifier: 5.22.2
         version: 5.22.2(react@18.3.1)
@@ -1210,9 +1210,6 @@ packages:
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
-
-  '@sage-bionetworks/synapse-types@0.0.2':
-    resolution: {integrity: sha512-31MxrIOnJiAUYeXsDsf2J+q9A6nVZt9pWGfG+pYoKC2vZIgUo7L3ToelYEqoufvdgHht+aWq83bnk/+Y4UNoUA==}
 
   '@sage-bionetworks/synapse-types@0.0.4':
     resolution: {integrity: sha512-uezI0I4qGgHSC0z6SaxSuVCOnVdFx/+F5603ViEeQ1vAWdBzty+UHmMYW3G0EJlilX8vQqppJTNjR048e1YjIQ==}
@@ -5837,8 +5834,6 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-virtualized-auto-sizer: 1.0.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-window: 1.8.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-
-  '@sage-bionetworks/synapse-types@0.0.2': {}
 
   '@sage-bionetworks/synapse-types@0.0.4': {}
 
