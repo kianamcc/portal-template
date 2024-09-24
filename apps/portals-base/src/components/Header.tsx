@@ -1,6 +1,8 @@
 import React from "react";
 import { Typography } from "@mui/material";
 import { usePortalContext } from "./PortalContext";
+import "../web-components/CustomButton";
+import "smart-webcomponents-react/button";
 
 function Header() {
   const { headerConfig } = usePortalContext();
@@ -11,6 +13,11 @@ function Header() {
     centerText = false,
     HeaderSvg,
   } = headerConfig;
+
+  const handleSmartButtonClick = () => {
+    alert("Smart Button clicked!");
+  };
+
   const hasImg = HeaderSvg !== undefined;
   const content = (
     <>
@@ -31,6 +38,10 @@ function Header() {
           {title}
         </Typography>
         <Typography variant="body1">{summary}</Typography>
+        <custom-button onClick={handleSmartButtonClick}></custom-button>
+        <smart-button onClick={handleSmartButtonClick}>
+          Smart Button
+        </smart-button>
       </div>
     </>
   );

@@ -26,3 +26,9 @@ $border-color-gray: #dcdcdc;
     @return url($footer-url);
   }
 }
+
+smart-button {
+  --smart-button-background: #4caf50; /* Background color */
+  --smart-button-color: white; /* Text color */
+  --smart-button-border-radius: 5px; /* Optional: border radius */
+}

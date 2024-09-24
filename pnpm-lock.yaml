@@ -172,6 +172,9 @@ importers:
       sass:
         specifier: ^1.71.1
         version: 1.77.8
+      smart-webcomponents-react:
+        specifier: ^20.0.1
+        version: 20.0.1
       synapse-react-client:
         specifier: ^3.3.11
         version: 3.3.11(@types/react@18.2.64)(csstype@3.1.3)(jquery@3.7.1)(mapbox-gl@1.13.3)(moment@2.30.1)(popper.js@1.16.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.2)
@@ -4312,6 +4315,9 @@ packages:
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
+
+  smart-webcomponents-react@20.0.1:
+    resolution: {integrity: sha512-21i/sjRv1kuHy15XvVn3wVYFLv27mJ0Cqt6uN24YhV01Hr/C67tSFN/yvtNwLEL5QgoKbyyCgvmSb9sZJ940dw==}
 
   snake-case@3.0.4:
     resolution: {integrity: sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==}
@@ -9495,6 +9501,8 @@ snapshots:
       totalist: 3.0.1
 
   slash@3.0.0: {}
+
+  smart-webcomponents-react@20.0.1: {}
 
   snake-case@3.0.4:
     dependencies:
