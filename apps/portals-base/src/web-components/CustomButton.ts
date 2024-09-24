@@ -3,7 +3,6 @@ class CustomButton extends HTMLElement {
     super();
     const shadow = this.attachShadow({ mode: "open" }); // create shadow root for element and attach it
     const button = document.createElement("button");
-    button.textContent = "Custom Button";
     const style = document.createElement("style");
     style.textContent = `
     button {
@@ -11,6 +10,8 @@ class CustomButton extends HTMLElement {
       color: white;
     }
     `;
+    const slot = document.createElement("slot"); // content projection, define placeholders inside your custom web components
+    button.appendChild(slot);
     shadow.appendChild(button);
     shadow.appendChild(style);
   }

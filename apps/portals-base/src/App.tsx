@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { PortalProps } from "./components/PortalProps";
 import { PortalContextProvider } from "./components/PortalContext";
+import "smart-webcomponents-react/source/styles/smart.default.css";
 
 const RouteResolver = React.lazy(() => import("./components/RouteResolver"));
 const queryClient = new QueryClient(defaultQueryClientConfig);

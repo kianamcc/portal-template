@@ -1,16 +1,18 @@
-declare namespace JSX {
-  interface IntrinsicElements {
-    "custom-button": React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLElement>,
-      HTMLElement
-    >;
+import { ButtonProps } from "smart-webcomponents-react/button";
 
-    "smart-button": React.DetailedHTMLProps<
-      React.HTMLAttributes<HTMLElement>,
-      HTMLElement
-    > & {
-      label?: string;
-      onClick?: (event: MouseEvent) => void;
-    };
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "custom-button": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+
+      "smart-button": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > &
+        ButtonProps;
+    }
   }
 }

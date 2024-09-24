@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "@mui/material";
 import { usePortalContext } from "./PortalContext";
 import "../web-components/CustomButton";
-import "smart-webcomponents-react/button";
+import { Button } from "smart-webcomponents-react/button";
 
 function Header() {
   const { headerConfig } = usePortalContext();
@@ -16,6 +16,10 @@ function Header() {
 
   const handleSmartButtonClick = () => {
     alert("Smart Button clicked!");
+  };
+
+  const handleCustomButtonClick = () => {
+    alert("Custom Button clicked!");
   };
 
   const hasImg = HeaderSvg !== undefined;
@@ -38,10 +42,25 @@ function Header() {
           {title}
         </Typography>
         <Typography variant="body1">{summary}</Typography>
-        <custom-button onClick={handleSmartButtonClick}></custom-button>
-        <smart-button onClick={handleSmartButtonClick}>
-          Smart Button
-        </smart-button>
+        <custom-button onClick={handleCustomButtonClick}>
+          Custom Button
+        </custom-button>
+        <Button
+          style={{
+            backgroundColor: "lightgrey",
+            color: "black",
+            border: "2px solid black",
+          }}
+          onClick={handleSmartButtonClick}
+        >
+          Custom
+        </Button>
+        <Button className="primary" onClick={handleSmartButtonClick}>
+          Normal
+        </Button>
+        <Button className="outlined primary" onClick={handleSmartButtonClick}>
+          Outlined
+        </Button>
       </div>
     </>
   );
