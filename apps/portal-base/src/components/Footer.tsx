@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as PoweredBySvg } from "../portal-assets/poweredbysynapse.svg";
-import Versions from "../components/Versions";
+import Versions from "./Versions";
 import { SynapseConstants, ExperimentalMode } from "synapse-react-client";
 import { usePortalContext } from "./PortalContext";
 

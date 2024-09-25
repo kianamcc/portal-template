@@ -1,4 +1,4 @@
-import { SynapseConfig } from "portals-base/types/portal-config";
+import { SynapseConfig } from "portal-base/types/portal-config";
 import { filesSql } from "../resources";
 
 const rgbIndex = 0;

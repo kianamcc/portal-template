@@ -11,8 +11,8 @@ export default mergeConfig(portalsViteConfig, {
     alias: [
       // mapping packages in monorepo to make vite use sources directly avoiding build step
       {
-        find: /portals-base(?!\/src\/style\/)/,
-        replacement: path.resolve(__dirname, "../portals-base/src"),
+        find: /portal-base(?!\/src\/style\/)/,
+        replacement: path.resolve(__dirname, "../portal-base/src"),
       },
     ],
   },

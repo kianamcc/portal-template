@@ -1,5 +1,5 @@
-@use 'portals-base/src/style/variables' as Portal;
-@use 'synapse-react-client/dist/style/abstracts/mixins' as SrcMixins;
+@use "portal-base/src/style/variables" as Portal;
+@use "synapse-react-client/dist/style/abstracts/mixins" as SrcMixins;
 // local variable for study page
 
 $marginTop: 40px;
@@ -80,7 +80,7 @@ $svg-icon-height: 30px;
     flex: 4;
     // PORTALS-2982: make TOC "sticky", but prevent overflow in digitalhealth detail pages
     min-width: 0;
-    [role='heading'] {
+    [role="heading"] {
       padding-top: 30px;
     }
   }
@@ -132,7 +132,7 @@ $svg-icon-height: 30px;
         width: auto;
       }
     }
-    .tab-item:not([aria-current='true']) {
+    .tab-item:not([aria-current="true"]) {
       background: rgba(0, 0, 0, 0.4);
       color: #fff;
       svg,
@@ -140,7 +140,7 @@ $svg-icon-height: 30px;
         @extend %svg-icon;
       }
     }
-    .tab-item[aria-current='true'] {
+    .tab-item[aria-current="true"] {
       background-color: #fff;
       svg,
       path {
@@ -160,7 +160,7 @@ $svg-icon-height: 30px;
   }
 
   .tab-content {
-    .TopLevelControls [role='heading'] {
+    .TopLevelControls [role="heading"] {
       padding-top: 0px;
     }
     .tab-groups {

@@ -1,5 +1,5 @@
 {
-  "name": "portals-base",
+  "name": "portal-base",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -27,7 +27,7 @@
     "react-spinners": "^0.13.8",
     "react-switch": "^7.0.0",
     "sass": "^1.71.1",
-    "synapse-react-client": "^3.3.11"
+    "synapse-react-client": "3.3.11"
   },
   "scripts": {
     "clean": "rimraf coverage",

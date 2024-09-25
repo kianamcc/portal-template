@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import { Box, Tab, Tabs } from '@mui/material'
-import { RowSynapseConfig } from '../types/portal-util-types'
-import { SynapseComponent } from '../components/SynapseComponent'
+import React, { useState } from "react";
+import { Box, Tab, Tabs } from "@mui/material";
+import { RowSynapseConfig } from "../types/portal-util-types";
+import { SynapseComponent } from "./SynapseComponent";
 
 export type TabConfig = {
-  label: string
-  synapseObject: RowSynapseConfig
-}
+  label: string;
+  synapseObject: RowSynapseConfig;
+};
 
 export type TabbedSynapseObjectsProps = {
-  tabConfigs: TabConfig[]
-  centerTabs: boolean
-}
+  tabConfigs: TabConfig[];
+  centerTabs: boolean;
+};
 
 export default function TabbedSynapseObjects(props: TabbedSynapseObjectsProps) {
-  const { tabConfigs, centerTabs } = props
+  const { tabConfigs, centerTabs } = props;
   const [selectedTabConfig, setSelectedTabConfig] = useState<TabConfig>(
-    tabConfigs[0],
-  )
+    tabConfigs[0]
+  );
   return (
     <Box className="TabbedSynapseObjects">
       <Tabs value={selectedTabConfig.label} centered={centerTabs}>
@@ -31,10 +31,10 @@ export default function TabbedSynapseObjects(props: TabbedSynapseObjectsProps) {
               disableTouchRipple
               onClick={() => setSelectedTabConfig(tabConfig)}
             />
-          )
+          );
         })}
       </Tabs>
       {<SynapseComponent synapseConfig={selectedTabConfig.synapseObject} />}
     </Box>
-  )
+  );
 }
