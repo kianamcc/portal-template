@@ -3,6 +3,7 @@ import { Typography } from "@mui/material";
 import { usePortalContext } from "./PortalContext";
 import "../web-components/CustomButton";
 import { Button } from "smart-webcomponents-react/button";
+import AiChatbot from "../web-components/AiChatbot";
 
 function Header() {
   const { headerConfig } = usePortalContext();
@@ -61,6 +62,20 @@ function Header() {
         <Button className="outlined primary" onClick={handleSmartButtonClick}>
           Outlined
         </Button>
+        <div>
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: "18px",
+              fontWeight: "bold",
+              marginTop: "20px",
+              marginBottom: "30px",
+            }}
+          >
+            AI Chatbot
+          </Typography>
+          <AiChatbot />
+        </div>
       </div>
     </>
   );
