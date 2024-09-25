@@ -1,24 +1,22 @@
-import RedirectDialog, {
-  redirectInstructionsMap,
-} from '../components/RedirectDialog'
-import React, { useEffect, useState } from 'react'
-import { useCookies } from 'react-cookie'
+import RedirectDialog, { redirectInstructionsMap } from "./RedirectDialog";
+import React, { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
 import {
   ApplicationSessionManager,
   SynapseClient,
   SynapseConstants,
   useFramebuster,
-} from 'synapse-react-client'
-import { useLogInDialogContext } from './LogInDialogContext'
+} from "synapse-react-client";
+import { useLogInDialogContext } from "./LogInDialogContext";
 
-const COOKIE_CONFIG_KEY = 'org.sagebionetworks.security.cookies.portal.config'
+const COOKIE_CONFIG_KEY = "org.sagebionetworks.security.cookies.portal.config";
 
 function AppInitializer(props: React.PropsWithChildren<Record<never, never>>) {
-  const [cookies, setCookie] = useCookies([COOKIE_CONFIG_KEY])
-  const [redirectUrl, setRedirectUrl] = useState<string | undefined>(undefined)
-  const { showLoginDialog, setShowLoginDialog } = useLogInDialogContext()
+  const [cookies, setCookie] = useCookies([COOKIE_CONFIG_KEY]);
+  const [redirectUrl, setRedirectUrl] = useState<string | undefined>(undefined);
+  const { showLoginDialog, setShowLoginDialog } = useLogInDialogContext();
 
-  const isFramed = useFramebuster()
+  const isFramed = useFramebuster();
 
   useEffect(() => {
     /**
@@ -28,23 +26,23 @@ function AppInitializer(props: React.PropsWithChildren<Record<never, never>>) {
      */
     function updateSynapseCallbackCookie(ev: MouseEvent) {
       if (!cookies) {
-        return
+        return;
       }
-      let isInvokingDownloadTable: boolean = false
+      let isInvokingDownloadTable: boolean = false;
       if (ev.target instanceof HTMLAnchorElement) {
-        const anchorElement = ev.target
+        const anchorElement = ev.target;
         isInvokingDownloadTable =
-          anchorElement.text === SynapseConstants.DOWNLOAD_FILES_MENU_TEXT
+          anchorElement.text === SynapseConstants.DOWNLOAD_FILES_MENU_TEXT;
         if (anchorElement.href) {
-          const { hostname } = new URL(anchorElement.href)
+          const { hostname } = new URL(anchorElement.href);
           if (
-            hostname.toLowerCase() === 'www.synapse.org' ||
+            hostname.toLowerCase() === "www.synapse.org" ||
             redirectInstructionsMap[anchorElement.href]
           ) {
             // && anchorElement.target !== '_blank') {  // should we skip the dialog if opening in a new window?
-            ev.preventDefault()
+            ev.preventDefault();
             if (!redirectUrl) {
-              setRedirectUrl(anchorElement.href)
+              setRedirectUrl(anchorElement.href);
             }
           }
         }
@@ -53,74 +51,74 @@ function AppInitializer(props: React.PropsWithChildren<Record<never, never>>) {
         ev.target instanceof HTMLButtonElement ||
         ev.target instanceof HTMLAnchorElement
       ) {
-        const el = ev.target as HTMLElement
+        const el = ev.target as HTMLElement;
         if (el.classList.contains(SynapseConstants.SRC_SIGN_IN_CLASS)) {
           if (!showLoginDialog) {
-            setShowLoginDialog(true)
+            setShowLoginDialog(true);
           }
         }
       }
-      let name = ''
-      let icon = ''
-      const logoImgElement = document.querySelector('#header-logo-image')
+      let name = "";
+      let icon = "";
+      const logoImgElement = document.querySelector("#header-logo-image");
       if (logoImgElement) {
-        let imageSrc: string | null = logoImgElement.getAttribute('src')
+        let imageSrc: string | null = logoImgElement.getAttribute("src");
         if (imageSrc) {
-          if (!imageSrc.toLowerCase().startsWith('http')) {
-            imageSrc = SynapseClient.getRootURL() + imageSrc.substring(1)
+          if (!imageSrc.toLowerCase().startsWith("http")) {
+            imageSrc = SynapseClient.getRootURL() + imageSrc.substring(1);
           }
-          icon = imageSrc
+          icon = imageSrc;
         }
       }
-      const footerLinkElement = document.querySelector('#footer-logo-link')
+      const footerLinkElement = document.querySelector("#footer-logo-link");
       if (footerLinkElement && footerLinkElement.textContent) {
-        name = footerLinkElement.textContent
+        name = footerLinkElement.textContent;
       }
       const cookieValue = {
         isInvokingDownloadTable,
         callbackUrl: window.location.href,
         logoUrl: icon,
         portalName: name,
-      }
+      };
       // expire after 10 seconds
       const domainValue = window.location.hostname
         .toLowerCase()
-        .endsWith('.synapse.org')
-        ? '.synapse.org'
-        : undefined
+        .endsWith(".synapse.org")
+        ? ".synapse.org"
+        : undefined;
       // Cookies provider exists above AppInitializer so the cookies prop will exist
       setCookie(COOKIE_CONFIG_KEY, JSON.stringify(cookieValue), {
-        path: '/',
+        path: "/",
         domain: domainValue,
         maxAge: 20,
-      })
+      });
     }
 
-    window.addEventListener('click', updateSynapseCallbackCookie)
+    window.addEventListener("click", updateSynapseCallbackCookie);
 
     // Clean up the global listener on component unmount.
     return () => {
-      window.removeEventListener('click', updateSynapseCallbackCookie)
-    }
+      window.removeEventListener("click", updateSynapseCallbackCookie);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps -- run only on mount
-  }, [])
+  }, []);
 
   return (
     <ApplicationSessionManager
-      downloadCartPageUrl={'/DownloadCart'}
+      downloadCartPageUrl={"/DownloadCart"}
       onResetSessionComplete={() => {
-        setShowLoginDialog(false)
+        setShowLoginDialog(false);
       }}
     >
       {!isFramed && props.children}
       <RedirectDialog
         onCancelRedirect={() => {
-          setRedirectUrl(undefined)
+          setRedirectUrl(undefined);
         }}
         redirectUrl={redirectUrl}
       />
     </ApplicationSessionManager>
-  )
+  );
 }
 
-export default AppInitializer
+export default AppInitializer;

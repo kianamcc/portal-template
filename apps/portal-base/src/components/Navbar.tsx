@@ -8,8 +8,8 @@ import {
   SystemUseNotification,
   useSynapseContext,
 } from "synapse-react-client";
-import NavLink from "../components/NavLink";
-import NavUserLink from "../components/NavUserLink";
+import NavLink from "./NavLink";
+import NavUserLink from "./NavUserLink";
 import { ConfigRoute, GenericRoute } from "../types/portal-config";
 import {
   Box,

@@ -57,9 +57,9 @@ importers:
       pluralize:
         specifier: ^8.0.0
         version: 8.0.0
-      portals-base:
+      portal-base:
         specifier: workspace:*
-        version: link:../portals-base
+        version: link:../portal-base
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -101,7 +101,7 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(@types/node@22.2.0)(@vitest/ui@1.6.0)(jsdom@21.1.2)(sass@1.77.8)(terser@5.31.3)
 
-  apps/portals-base:
+  apps/portal-base:
     dependencies:
       '@emotion/react':
         specifier: ^11.11.4
@@ -6401,7 +6401,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@types/node@22.2.0)(@vitest/ui@1.6.0)(jsdom@21.1.2)(sass@1.77.8)(terser@5.31.3)
+      vitest: 1.6.0(@types/node@18.19.41)(@vitest/ui@1.6.0)(jsdom@21.1.2)(sass@1.77.8)(terser@5.31.3)
 
   '@vitest/utils@1.6.0':
     dependencies:

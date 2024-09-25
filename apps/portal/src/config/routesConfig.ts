@@ -1,4 +1,4 @@
-import { GenericRoute } from "portals-base/types/portal-config";
+import { GenericRoute } from "portal-base/types/portal-config";
 
 import routeControlWrapperProps from "./routeControlWrapperProps";
 import { datasetsDetailsPage } from "./synapseConfigs/datasets";

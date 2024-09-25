@@ -1,4 +1,4 @@
-import { RouteControlWrapperProps } from "portals-base/components/RouteControlWrapper";
+import { RouteControlWrapperProps } from "portal-base/components/RouteControlWrapper";
 import { datasets, files, publications, contributions } from "./synapseConfigs";
 
 /**
