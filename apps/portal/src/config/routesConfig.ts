@@ -147,6 +147,17 @@ const routes: GenericRoute[] = [
       },
     ],
   },
+  {
+    path: "AI Chatbox",
+    exact: true,
+    hideRouteFromNavbar: false,
+    synapseConfigArray: [
+      {
+        name: "AiChatbot",
+        props: {},
+      },
+    ],
+  },
 ];
 
 export default routes;

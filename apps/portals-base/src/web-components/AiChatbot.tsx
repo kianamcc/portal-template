@@ -1,6 +1,10 @@
 import { DeepChat } from "deep-chat-react";
-// import "deep-chat-react/dist/index.css";
+import { Typography } from "@mui/material";
 import React from "react";
+
+export declare type AiChatbotProps = {
+  demo?: boolean;
+};
 
 const AiChatbot = () => {
   const openAIConfig = {
@@ -12,19 +16,29 @@ const AiChatbot = () => {
       },
     },
   };
-  const history = [
-    // { role: "user", text: "Hey, how are you today?" },
-    { role: "ai", text: "Hi, what can I help you with today?" },
-  ];
+  const history = [{ role: "ai", text: "Hi, what can I help you with today?" }];
 
   return (
-    <DeepChat
-      demo={true}
-      style={{ borderRadius: "10px" }}
-      textInput={{ placeholder: { text: "Welcome to the demo!" } }}
-      history={history}
-      //   directConnection={openAIConfig}
-    />
+    <>
+      <Typography
+        variant="h3"
+        sx={{
+          fontSize: "18px",
+          fontWeight: "bold",
+          marginTop: "20px",
+          marginBottom: "30px",
+        }}
+      >
+        AI Chatbot
+      </Typography>
+      <DeepChat
+        demo={true}
+        style={{ borderRadius: "10px" }}
+        textInput={{ placeholder: { text: "Welcome to the demo!" } }}
+        history={history}
+        // directConnection={openAIConfig}
+      />
+    </>
   );
 };
 

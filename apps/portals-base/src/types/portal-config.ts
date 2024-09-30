@@ -36,6 +36,7 @@ import { CSSProperties } from "react";
 import { TabbedSynapseObjectsProps } from "../components/TabbedSynapseObjects";
 import { RedirectToURLProps } from "../components/RedirectToURL";
 import { SynapseComponentCollapseProps } from "../components/SynapseComponentCollapse";
+import AiChatbot from "src/web-components/AiChatbot";
 
 // For styling the header on the home page -- the main title and the summary text
 export type HomePageHeaderConfig = {
@@ -55,6 +56,12 @@ type CardContainerLogic = {
 type DynamicForm = {
   name: "DynamicForm";
   props: DynamicFormProps;
+};
+
+type AiChatbot = {
+  name: "AiChatbot";
+  props: {};
+  // props: AiChatbot;
 };
 
 type QueryWrapper = {
@@ -320,6 +327,7 @@ export type SynapseConfig = (
   | ChallengeDataDownloadWrapper
   | TimelinePlot
   | DynamicForm
+  | AiChatbot
 ) &
   Metadata;
 
