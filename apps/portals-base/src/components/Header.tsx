@@ -62,20 +62,6 @@ function Header() {
         <Button className="outlined primary" onClick={handleSmartButtonClick}>
           Outlined
         </Button>
-        <div>
-          <Typography
-            variant="h3"
-            sx={{
-              fontSize: "18px",
-              fontWeight: "bold",
-              marginTop: "20px",
-              marginBottom: "30px",
-            }}
-          >
-            AI Chatbot
-          </Typography>
-          <AiChatbot />
-        </div>
       </div>
     </>
   );
