@@ -35,7 +35,7 @@ const AiChatbot = () => {
         style={{ borderRadius: "10px" }}
         textInput={{ placeholder: { text: "Welcome to the demo!" } }}
         history={history}
-        directConnection={openAIConfig.openAI.key || ""}
+        directConnection={openAIConfig.openAI.key ? openAIConfig : {}}
       />
     </>
   );
